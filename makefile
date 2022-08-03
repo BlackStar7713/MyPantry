@@ -215,18 +215,23 @@ app-original.apk :
 	mv -v app-debug.apk app-original.apk
 
 
+# Add zipalign to path (Android/sdk/build-tools/xxx/zipalign)
 app-instrumented.apk : app-original.apk
 	@export ABC_CONFIG=$(ABC_CFG) && \
 	export JAVA_OPTS=$(JAVA_OPTS) && \
 	export INSTRUMENTATION_OPTS=$(INSTRUMENTATION_OPTS) && \
 	INSTRUMENTED_APK=`$(ABC) instrument-apk app-original.apk` && \
 	$(ABC) instrument-apk app-original.apk && \
-	mv -v $${INSTRUMENTED_APK} app-instrumented.apk 
+	mv -v $${INSTRUMENTED_APK} app-instrumented.apk  && \
+    zipalign -f -p 4 app-instrumented.apk app-instrumented-aligned.apk && \
+    mv -v app-instrumented-aligned.apk app-instrumented.apk && \
+    $(ABC) sign-apk app-instrumented.apk
+    
 
 app-androidTest.apk :
 	@export ABC_CONFIG=$(ABC_CFG) && \
 	$(GW) assembleDebugAndroidTest </dev/null && \
-	mv app/build/intermediates/apk/androidTest/debug/app-debug-androidTest.apk app-androidTest-unsigned.apk && \
+	mv app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk app-androidTest-unsigned.apk && \
 	$(ABC) sign-apk app-androidTest-unsigned.apk && \
 	mv -v app-androidTest-unsigned.apk app-androidTest.apk
 
@@ -235,7 +240,7 @@ app-original-for-coverage.apk app-androidTest-for-coverage.apk:
 	@export ABC_CONFIG=$(ABC_CFG) && \
 	$(GW) -PjacocoEnabled=true clean assembleDebug assembleDebugAndroidTest </dev/null && \
 	mv app/build/outputs/apk/debug/app-debug.apk app-original-for-coverage.apk  && \
-	mv app/build/intermediates/apk/androidTest/debug/app-debug-androidTest.apk app-androidTest-for-coverage.apk
+	mv app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk app-androidTest-for-coverage.apk
 
 # Utility - TODO Maybe move this to function?
 stop-emulator:
