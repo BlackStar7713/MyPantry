@@ -114,15 +114,17 @@ $(if $(filter $(IS_RUNNING),1),$(if $(filter $(TRACING_APKS_INSTALLED),0), $(cal
 $(shell if [ "$(TRACING_APKS_INSTALLED)" -eq "0" ]; then \
 	(>&2 echo "Installing instrumented apk"); \
 	export ABC_CONFIG=$(ABC_CFG) && $(ABC) install-apk app-instrumented.apk; \
-    $(ADB) shell pm grant com.hermanowicz.pantry WRITE_EXTERNAL_STORAGE;\
-    $(ADB) shell pm grant com.hermanowicz.pantry ACCESS_MEDIA_LOCATION;\
+    $(ADB) shell pm grant com.hermanowicz.pantry android.permission.ACCESS_MEDIA_LOCATION;\
+    $(ADB) shell pm grant com.hermanowicz.pantry android.permission.CAMERA;\
+    $(ADB) shell pm grant com.hermanowicz.pantry android.permission.READ_EXTERNAL_STORAGE;\
 	(>&2 echo "Installing test apk") ;\
 	export ABC_CONFIG=$(ABC_CFG) && $(ABC) install-apk app-androidTest.apk; \
 else \
 	(>&2 echo "Resetting the data of the apk"); \
 	$(ADB) shell pm clear com.hermanowicz.pantry > /dev/null; \
-    $(ADB) shell pm grant com.hermanowicz.pantry WRITE_EXTERNAL_STORAGE;\
-    $(ADB) shell pm grant com.hermanowicz.pantry ACCESS_MEDIA_LOCATION;\
+    $(ADB) shell pm grant com.hermanowicz.pantry android.permission.ACCESS_MEDIA_LOCATION;\
+    $(ADB) shell pm grant com.hermanowicz.pantry android.permission.CAMERA;\
+    $(ADB) shell pm grant com.hermanowicz.pantry android.permission.READ_EXTERNAL_STORAGE;\
 	fi)
 $(eval TRACING_APKS_INSTALLED := 1)
 endef
@@ -141,8 +143,9 @@ $(if $(filter $(IS_RUNNING),1),$(if $(filter $(COVERAGE_APKS_INSTALLED),0), $(ca
 $(shell if [ "$(COVERAGE_APKS_INSTALLED)" -eq "0" ]; then \
 	(>&2 echo "Installing coverage apk"); \
 	export ABC_CONFIG=$(ABC_CFG) && $(ABC) install-apk app-original-for-coverage.apk; \
-    $(ADB) shell pm grant com.hermanowicz.pantry WRITE_EXTERNAL_STORAGE;\
-    $(ADB) shell pm grant com.hermanowicz.pantry ACCESS_MEDIA_LOCATION;\
+    $(ADB) shell pm grant com.hermanowicz.pantry android.permission.ACCESS_MEDIA_LOCATION;\
+    $(ADB) shell pm grant com.hermanowicz.pantry android.permission.CAMERA;\
+    $(ADB) shell pm grant com.hermanowicz.pantry android.permission.READ_EXTERNAL_STORAGE;\
 	(>&2 echo "Installing test coverage apk") ;\
 	export ABC_CONFIG=$(ABC_CFG) && $(ABC) install-apk app-androidTest-for-coverage.apk; \
 else \
