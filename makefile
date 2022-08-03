@@ -210,7 +210,7 @@ clean-all : clean-carved-tests clean-carved-coverage clean-espresso-coverage
 app-original.apk : 
 	@export ABC_CONFIG=$(ABC_CFG) && \
 	$(GW) -PjacocoEnabled=false assembleDebug </dev/null && \
-	mv app/build/intermediates/apk/debug/app-debug.apk app-debug.apk && \
+	mv app/build/outputs/apk/debug/app-debug.apk app-debug.apk && \
 	$(ABC) sign-apk app-debug.apk && \
 	mv -v app-debug.apk app-original.apk
 
@@ -234,7 +234,7 @@ app-androidTest.apk :
 app-original-for-coverage.apk app-androidTest-for-coverage.apk:
 	@export ABC_CONFIG=$(ABC_CFG) && \
 	$(GW) -PjacocoEnabled=true clean assembleDebug assembleDebugAndroidTest </dev/null && \
-	mv app/build/intermediates/apk/debug/app-debug.apk app-original-for-coverage.apk  && \
+	mv app/build/outputs/apk/debug/app-debug.apk app-original-for-coverage.apk  && \
 	mv app/build/intermediates/apk/androidTest/debug/app-debug-androidTest.apk app-androidTest-for-coverage.apk
 
 # Utility - TODO Maybe move this to function?
