@@ -42,7 +42,7 @@ import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.junit.IgnoreClass;
+import org.junit.Ignore;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -50,7 +50,7 @@ import java.util.List;
 
 import models.ProductTestModel;
 
-@IgnoreClass
+@Ignore
 @RunWith(AndroidJUnit4.class)
 public class PrintQRCodesActivityTest {
 
