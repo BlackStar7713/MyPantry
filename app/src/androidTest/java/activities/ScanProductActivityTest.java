@@ -42,6 +42,7 @@ import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.junit.Ignore;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -77,6 +78,7 @@ public class ScanProductActivityTest {
         enterBarcodeManually = activity.findViewById(R.id.cardview_enterBarcodeManually);
     }
 
+    @Ignore
     @Test
     public void onCorrectScanResultShouldNavigateToProductDetailsActivity() {
         ProductDb productDb = Room.inMemoryDatabaseBuilder(activity.getApplicationContext(),

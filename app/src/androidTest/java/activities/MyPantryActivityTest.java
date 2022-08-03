@@ -64,6 +64,7 @@ import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.junit.Ignore;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -158,6 +159,7 @@ public class MyPantryActivityTest {
         ProductDb.getInstance(activity).productsDao().clearDb();
     }
 
+    @Ignore
     @Test
     public void whenDatabaseHasProductsEmptyPantryStatementNotShows() {
         insertTestProductsToDbAndRestartActivity();
