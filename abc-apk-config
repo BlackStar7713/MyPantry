@@ -7,6 +7,5 @@ make_assemble_apk_command = assembleDebug
 make_assemble_android_test_command = assembleDebugAndroidTest
 make_test_runner = com.hermanowicz.pantry.test/androidx.test.runner.AndroidJUnitRunner
 make_espresso_coverage_file_path = app/build/outputs/code_coverage/debugAndroidTest/connected/*coverage.ec
-make_permissions = android.permission.ACCESS_MEDIA_LOCATION,android.permission.CAMERA,android.permission.READ_EXTERNAL_STORAGE
 make_instr_skip_classes = com.hermanowicz.pantry.R
 make_zipalign = true
