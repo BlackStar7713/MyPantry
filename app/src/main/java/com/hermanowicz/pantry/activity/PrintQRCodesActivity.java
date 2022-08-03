@@ -39,9 +39,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.preference.PreferenceManager;
 
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.MobileAds;
 import com.hermanowicz.pantry.BuildConfig;
 import com.hermanowicz.pantry.R;
 import com.hermanowicz.pantry.databinding.ActivityPrintQrcodesBinding;
@@ -93,7 +90,6 @@ public class PrintQRCodesActivity extends AppCompatActivity implements PrintQRCo
 
         context = getApplicationContext();
 
-        AdView adView = binding.adview;
         qrCodeImage = binding.imageQrCode;
         printQrCodes = binding.buttonPrintQRCodes;
         sendPdfByEmail = binding.buttonSendPdfByEmail;
@@ -110,11 +106,6 @@ public class PrintQRCodesActivity extends AppCompatActivity implements PrintQRCo
         presenter.setProductList(productList);
         presenter.showQRCodeImage();
 
-        if (!presenter.isPremium()) {
-            MobileAds.initialize(context);
-            AdRequest adRequest = new AdRequest.Builder().build();
-            adView.loadAd(adRequest);
-        }
 
         if (presenter.isOfflineDb()) {
             presenter.setAllProductList(null);

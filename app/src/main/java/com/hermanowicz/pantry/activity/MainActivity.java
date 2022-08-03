@@ -36,9 +36,6 @@ import androidx.appcompat.app.AppCompatDelegate;
 import androidx.cardview.widget.CardView;
 import androidx.preference.PreferenceManager;
 
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.MobileAds;
 import com.google.firebase.FirebaseException;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -99,7 +96,6 @@ public class MainActivity extends AppCompatActivity implements MainView, Account
     private CardView appSettings;
     private TextView loggedUser;
     private ImageView authorInfo;
-    private AdView adView;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -117,10 +113,6 @@ public class MainActivity extends AppCompatActivity implements MainView, Account
         setContentView(binding.getRoot());
 
         context = getApplicationContext();
-
-        MobileAds.initialize(context);
-
-        adView = binding.adview;
         authorInfo = binding.authorInfo;
         myPantry = binding.myPantryCV;
         scanProduct = binding.scanProductCV;
@@ -135,10 +127,6 @@ public class MainActivity extends AppCompatActivity implements MainView, Account
         presenter.setPremiumAccess(new PremiumAccess(context));
         presenter.updateUserData();
 
-        if (!presenter.isPremium()) {
-            AdRequest adRequest = new AdRequest.Builder().build();
-            adView.loadAd(adRequest);
-        }
 
         if (presenter.isOfflineDb()) {
             ProductDb db = ProductDb.getInstance(context);
@@ -352,22 +340,16 @@ public class MainActivity extends AppCompatActivity implements MainView, Account
     @Override
     public void onResume() {
         super.onResume();
-        assert adView != null;
-        adView.resume();
     }
 
     @Override
     public void onPause() {
         super.onResume();
-        assert adView != null;
-        adView.pause();
         super.onPause();
     }
 
     @Override
     public void onDestroy() {
-        assert adView != null;
-        adView.destroy();
         super.onDestroy();
     }
 

@@ -47,9 +47,6 @@ import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.MobileAds;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.FirebaseException;
 import com.google.firebase.auth.FirebaseAuth;
@@ -121,7 +118,6 @@ public class MyPantryActivity extends AppCompatActivity implements MyPantryView,
     private ContentLoadingProgressBar loadingBar;
     private DrawerLayout drawerLayout;
     private Toolbar toolbar;
-    private AdView adView;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -143,7 +139,6 @@ public class MyPantryActivity extends AppCompatActivity implements MyPantryView,
         presenter.setPremiumAccess(new PremiumAccess(context));
 
 
-        adView = binding.include.adview;
         loadingBar = binding.include.loadingBar;
         productRecyclerView = binding.include.recyclerviewProducts;
         navView = binding.navView;
@@ -171,11 +166,6 @@ public class MyPantryActivity extends AppCompatActivity implements MyPantryView,
         productRecyclerView.setHasFixedSize(true);
         productRecyclerView.setItemAnimator(new DefaultItemAnimator());
 
-        if (!presenter.isPremium()) {
-            MobileAds.initialize(context);
-            AdRequest adRequest = new AdRequest.Builder().build();
-            adView.loadAd(adRequest);
-        }
     }
 
     private void setListeners() {
@@ -563,18 +553,15 @@ public class MyPantryActivity extends AppCompatActivity implements MyPantryView,
     @Override
     public void onResume() {
         super.onResume();
-        adView.resume();
     }
 
     @Override
     public void onPause() {
-        adView.pause();
         super.onPause();
     }
 
     @Override
     public void onDestroy() {
-        adView.destroy();
         super.onDestroy();
     }
 

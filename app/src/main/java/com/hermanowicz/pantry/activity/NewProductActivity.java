@@ -55,9 +55,6 @@ import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.Toolbar;
 import androidx.preference.PreferenceManager;
 
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.MobileAds;
 import com.google.firebase.FirebaseException;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -139,7 +136,6 @@ public class NewProductActivity extends AppCompatActivity implements OnItemSelec
     private CheckBox productIsBio;
     private CheckBox productIsVege;
     private Button addProduct;
-    private AdView adView;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -160,7 +156,6 @@ public class NewProductActivity extends AppCompatActivity implements OnItemSelec
         Toolbar toolbar = binding.toolbar;
         setSupportActionBar(toolbar);
 
-        adView = binding.adview;
         productName = binding.productEdit.edittextName;
         productType = binding.productEdit.spinnerProductType;
         productCategory = binding.productEdit.spinnerProductCategory;
@@ -200,11 +195,6 @@ public class NewProductActivity extends AppCompatActivity implements OnItemSelec
         if (barcode != null)
             presenter.setBarcode(barcode);
 
-        if (!presenter.isPremium()) {
-            MobileAds.initialize(context);
-            AdRequest adRequest = new AdRequest.Builder().build();
-            adView.loadAd(adRequest);
-        }
 
         if (presenter.isOfflineDb())
             presenter.setAllProductList(null);
@@ -650,18 +640,15 @@ public class NewProductActivity extends AppCompatActivity implements OnItemSelec
     @Override
     public void onResume() {
         super.onResume();
-        adView.resume();
     }
 
     @Override
     public void onPause() {
-        adView.pause();
         super.onPause();
     }
 
     @Override
     public void onDestroy() {
-        adView.destroy();
         super.onDestroy();
     }
 

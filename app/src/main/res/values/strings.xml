@@ -14,7 +14,14 @@
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
   -->
+<!--
+todo first 4 values are added as they need to exist for compilation
+    <string name="banner_ad_unit_id" translatable="false">0</string>
+    <string name="ads_app_id" translatable="false">0</string>
+    <string name="open_app_ad_unit_id" translatable="false">0</string>
+-->
 <resources>
+    <string name="database_encrypt_code" translatable="false">password</string>
     <string name="app_name">My Pantry</string>
     <string name="title_activity_my_pantry">My Pantry</string>
     <string name="title_activity_scan_the_product">Scan the product\'s code</string>

@@ -47,9 +47,6 @@ import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.FileProvider;
 
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.MobileAds;
 import com.google.firebase.FirebaseException;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -119,7 +116,6 @@ public class AddPhotoActivity extends AppCompatActivity implements AddPhotoView 
         presenter = new AddPhotoPresenter(this, this);
 
         Toolbar toolbar = binding.toolbar;
-        AdView adView = binding.adview;
         imageViewPhoto = binding.imageviewPhoto;
         description = binding.edittextPhotoDescription;
         takePhoto = binding.buttonTakePhoto;
@@ -132,11 +128,6 @@ public class AddPhotoActivity extends AppCompatActivity implements AddPhotoView 
         presenter.showPhoto();
         presenter.setPremiumAccess(new PremiumAccess(context));
 
-        if(!presenter.isPremium()) {
-            MobileAds.initialize(context);
-            AdRequest adRequest = new AdRequest.Builder().build();
-            adView.loadAd(adRequest);
-        }
 
         setSupportActionBar(toolbar);
     }

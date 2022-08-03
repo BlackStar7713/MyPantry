@@ -40,9 +40,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.Toolbar;
 
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.MobileAds;
 import com.google.firebase.FirebaseException;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -113,7 +110,6 @@ public class ProductDetailsActivity extends AppCompatActivity implements Product
     private Button addBarcode;
     private Button addPhoto;
     private Button editProduct;
-    private AdView adView;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -156,7 +152,6 @@ public class ProductDetailsActivity extends AppCompatActivity implements Product
         editProduct = binding.buttonEditProduct;
         addBarcode = binding.buttonAddBarcode;
         addPhoto = binding.buttonAddPhoto;
-        adView = binding.adview;
 
         setSupportActionBar(toolbar);
         toolbar.setTitle("");
@@ -164,11 +159,6 @@ public class ProductDetailsActivity extends AppCompatActivity implements Product
         presenter = new ProductDetailsPresenter(this, this);
         presenter.setPremiumAccess(new PremiumAccess(context));
 
-        if (!presenter.isPremium()) {
-            MobileAds.initialize(context);
-            AdRequest adRequest = new AdRequest.Builder().build();
-            adView.loadAd(adRequest);
-        }
 
         Intent intent = getIntent();
         ArrayList<Product> productList = intent.getParcelableArrayListExtra("product_list");
@@ -379,18 +369,15 @@ public class ProductDetailsActivity extends AppCompatActivity implements Product
     @Override
     public void onResume() {
         super.onResume();
-        adView.resume();
     }
 
     @Override
     public void onPause() {
-        adView.pause();
         super.onPause();
     }
 
     @Override
     public void onDestroy() {
-        adView.destroy();
         super.onDestroy();
     }
 

@@ -30,7 +30,6 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 
-import com.google.android.gms.ads.MobileAds;
 import com.hermanowicz.pantry.R;
 import com.hermanowicz.pantry.databinding.ActivitySplashScreenBinding;
 import com.hermanowicz.pantry.model.AppSettingsModel;
@@ -63,11 +62,6 @@ public class SplashScreenActivity extends AppCompatActivity {
     }
 
     private void initAds() {
-        MobileAds.initialize(
-                this,
-                initializationStatus -> {
-                });
-        appOpenManager = new AppOpenManager(this);
     }
 
     @Override

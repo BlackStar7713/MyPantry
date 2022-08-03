@@ -29,11 +29,6 @@ import androidx.lifecycle.LifecycleObserver;
 import androidx.lifecycle.OnLifecycleEvent;
 import androidx.lifecycle.ProcessLifecycleOwner;
 
-import com.google.android.gms.ads.AdError;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.FullScreenContentCallback;
-import com.google.android.gms.ads.LoadAdError;
-import com.google.android.gms.ads.appopen.AppOpenAd;
 import com.hermanowicz.pantry.R;
 import com.hermanowicz.pantry.activity.SplashScreenActivity;
 
@@ -45,9 +40,7 @@ import java.util.Date;
 public class AppOpenManager implements LifecycleObserver, Application.ActivityLifecycleCallbacks {
     private static final String LOG_TAG = "AppOpenManager";
     private static boolean isShowingAd = false;
-    private final String adUnitId;
     private final SplashScreenActivity myApplication;
-    private AppOpenAd appOpenAd = null;
     private Activity currentActivity;
     private long loadTime = 0;
 
@@ -55,7 +48,6 @@ public class AppOpenManager implements LifecycleObserver, Application.ActivityLi
      * Constructor
      */
     public AppOpenManager(SplashScreenActivity myApplication) {
-        adUnitId = myApplication.getString(R.string.open_app_ad_unit_id);
         this.myApplication = myApplication;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
             this.myApplication.registerActivityLifecycleCallbacks(this);
@@ -71,53 +63,8 @@ public class AppOpenManager implements LifecycleObserver, Application.ActivityLi
         if (isAdAvailable()) {
             return;
         }
-
-        /**
-         * Called when an app open ad has loaded.
-         *
-         * @param ad the loaded app open ad.
-         */
-        /**
-         * Called when an app open ad has failed to load.
-         *
-         * @param loadAdError the error.
-         */
-        // Handle the error.
-        AppOpenAd.AppOpenAdLoadCallback loadCallback = new AppOpenAd.AppOpenAdLoadCallback() {
-            /**
-             * Called when an app open ad has loaded.
-             *
-             * @param ad the loaded app open ad.
-             */
-            @Override
-            public void onAdLoaded(AppOpenAd ad) {
-                AppOpenManager.this.appOpenAd = ad;
-                AppOpenManager.this.loadTime = (new Date()).getTime();
-            }
-
-            /**
-             * Called when an app open ad has failed to load.
-             *
-             * @param loadAdError the error.
-             */
-            @Override
-            public void onAdFailedToLoad(LoadAdError loadAdError) {
-                // Handle the error.
-            }
-
-        };
-        AdRequest request = getAdRequest();
-        AppOpenAd.load(
-                myApplication, adUnitId, request,
-                AppOpenAd.APP_OPEN_AD_ORIENTATION_PORTRAIT, loadCallback);
     }
 
-    /**
-     * Creates and returns ad request.
-     */
-    private AdRequest getAdRequest() {
-        return new AdRequest.Builder().build();
-    }
 
     /**
      * Utility method to check if ad was loaded more than n hours ago.
@@ -132,7 +79,7 @@ public class AppOpenManager implements LifecycleObserver, Application.ActivityLi
      * Utility method that checks if ad exists and can be shown.
      */
     public boolean isAdAvailable() {
-        return appOpenAd != null && wasLoadTimeLessThanNHoursAgo(4);
+        return true;
     }
 
     /**
@@ -178,28 +125,6 @@ public class AppOpenManager implements LifecycleObserver, Application.ActivityLi
         if (!isShowingAd && isAdAvailable()) {
             Log.d(LOG_TAG, "Will show ad.");
 
-            FullScreenContentCallback fullScreenContentCallback =
-                    new FullScreenContentCallback() {
-                        @Override
-                        public void onAdDismissedFullScreenContent() {
-                            // Set the reference to null so isAdAvailable() returns false.
-                            AppOpenManager.this.appOpenAd = null;
-                            isShowingAd = false;
-                            fetchAd();
-                        }
-
-                        @Override
-                        public void onAdFailedToShowFullScreenContent(AdError adError) {
-                        }
-
-                        @Override
-                        public void onAdShowedFullScreenContent() {
-                            isShowingAd = true;
-                        }
-                    };
-
-            appOpenAd.setFullScreenContentCallback(fullScreenContentCallback);
-            appOpenAd.show(currentActivity);
 
         } else {
             Log.d(LOG_TAG, "Can not show ad.");

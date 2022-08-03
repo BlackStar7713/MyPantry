@@ -39,9 +39,6 @@ import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.MobileAds;
 import com.google.firebase.FirebaseException;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -88,7 +85,6 @@ public class CategoriesActivity extends AppCompatActivity implements DialogCateg
     private final CategoriesAdapter categoriesAdapter = new CategoriesAdapter();
     private final CompositeDisposable disposables = new CompositeDisposable();
 
-    private AdView adView;
     private RecyclerView categoryRecyclerView;
     private TextView statement;
 
@@ -110,7 +106,6 @@ public class CategoriesActivity extends AppCompatActivity implements DialogCateg
         context = getApplicationContext();
 
         Toolbar toolbar = binding.toolbar;
-        adView = binding.adview;
         categoryRecyclerView = binding.recyclerviewCategories;
         statement = binding.textStatement;
 
@@ -118,11 +113,6 @@ public class CategoriesActivity extends AppCompatActivity implements DialogCateg
 
         presenter = new CategoryPresenter(this, context);
 
-        if(!presenter.isPremium()) {
-            MobileAds.initialize(context);
-            AdRequest adRequest = new AdRequest.Builder().build();
-            adView.loadAd(adRequest);
-        }
 
         presenter.updateCategoryListView();
         categoryRecyclerView.setAdapter(categoriesAdapter);
@@ -273,18 +263,15 @@ public class CategoriesActivity extends AppCompatActivity implements DialogCateg
     @Override
     public void onResume() {
         super.onResume();
-        adView.resume();
     }
 
     @Override
     public void onPause() {
-        adView.pause();
         super.onPause();
     }
 
     @Override
     public void onDestroy() {
-        adView.destroy();
         super.onDestroy();
     }
 
