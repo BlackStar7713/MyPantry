@@ -1,0 +1,34 @@
+package com.hermanowicz.pantry.db.product;
+
+import org.junit.Before;
+import androidx.test.core.app.ApplicationProvider;
+import org.robolectric.RobolectricTestRunner;
+import org.junit.runner.RunWith;
+import org.junit.Test;
+
+@RunWith(RobolectricTestRunner.class)
+public class Test862 {
+
+    @Before()
+    public void setup() {
+        org.robolectric.shadows.ShadowSQLiteConnection.reset();
+    }
+
+    /**
+     * Generated from /scratch/berreiter/action-based-test-carving/apps-src/MyPantry/traces/activities.NewProductActivityTest#addingTheProductShouldNavigateToPrintQRDetailsActivity/Trace-1659559163567.txt
+     * Method invocation under test: <com.hermanowicz.pantry.db.product.ProductsDao_Impl: java.util.List getAllProductsList()>_325_647
+     */
+    @Test(timeout = 4000)
+    public void test_com_hermanowicz_pantry_db_product_ProductsDao_Impl_getAllProductsList_001() throws Exception {
+        com.hermanowicz.pantry.db.product.ProductDb_Impl productdb_impl6 = null;
+        androidx.room.DatabaseConfiguration databaseconfiguration27 = org.mockito.Mockito.mock(androidx.room.DatabaseConfiguration.class);
+        java.util.HashMap hashmap24 = org.mockito.Mockito.mock(java.util.HashMap.class);
+        productdb_impl6 = new com.hermanowicz.pantry.db.product.ProductDb_Impl();
+        productdb_impl6.createOpenHelper(databaseconfiguration27);
+        productdb_impl6.getRequiredAutoMigrationSpecs();
+        productdb_impl6.getAutoMigrations(hashmap24);
+        productdb_impl6.getRequiredTypeConverters();
+        com.hermanowicz.pantry.db.product.ProductsDao_Impl productsdao_impl3 = (com.hermanowicz.pantry.db.product.ProductsDao_Impl) productdb_impl6.productsDao();
+        productsdao_impl3.getAllProductsList();
+    }
+}

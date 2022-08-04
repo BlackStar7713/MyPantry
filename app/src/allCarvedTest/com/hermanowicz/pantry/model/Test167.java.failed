@@ -1,0 +1,29 @@
+package com.hermanowicz.pantry.model;
+
+import org.junit.Before;
+import androidx.test.core.app.ApplicationProvider;
+import org.robolectric.RobolectricTestRunner;
+import org.junit.runner.RunWith;
+import org.junit.Test;
+
+@RunWith(RobolectricTestRunner.class)
+public class Test167 {
+
+    @Before()
+    public void setup() {
+        org.robolectric.shadows.ShadowSQLiteConnection.reset();
+    }
+
+    /**
+     * Generated from /scratch/berreiter/action-based-test-carving/apps-src/MyPantry/traces/activities.MainActivityTest#shouldGoToStorageLocationsActivity/Trace-1659558980746.txt
+     * Method invocation under test: <com.hermanowicz.pantry.model.StorageLocationModel: java.util.List getStorageLocationList()>_403_803
+     */
+    @Test(timeout = 4000)
+    public void test_com_hermanowicz_pantry_model_StorageLocationModel_getStorageLocationList_001() throws Exception {
+        com.hermanowicz.pantry.model.StorageLocationModel storagelocationmodel2 = null;
+        android.content.Context context13 = ApplicationProvider.getApplicationContext();
+        storagelocationmodel2 = new com.hermanowicz.pantry.model.StorageLocationModel(context13);
+        storagelocationmodel2.setOfflineDbStorageLocationList();
+        storagelocationmodel2.getStorageLocationList();
+    }
+}

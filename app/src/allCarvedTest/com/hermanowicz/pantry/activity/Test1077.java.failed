@@ -1,0 +1,32 @@
+package com.hermanowicz.pantry.activity;
+
+import org.junit.Before;
+import androidx.test.core.app.ApplicationProvider;
+import org.robolectric.RobolectricTestRunner;
+import org.junit.runner.RunWith;
+import org.junit.Test;
+
+@RunWith(RobolectricTestRunner.class)
+public class Test1077 {
+
+    @Before()
+    public void setup() {
+        org.robolectric.shadows.ShadowSQLiteConnection.reset();
+    }
+
+    /**
+     * Generated from /scratch/berreiter/action-based-test-carving/apps-src/MyPantry/traces/activities.NewProductActivityTest#onPressedBackNavigateToMainActivity/Trace-1659559170023.txt
+     * Method invocation under test: <com.hermanowicz.pantry.activity.NewProductActivity: boolean onKeyDown(int,android.view.KeyEvent)>_446_892
+     */
+    @Test(timeout = 4000)
+    public void test_com_hermanowicz_pantry_activity_NewProductActivity_onKeyDown_001() throws Exception {
+        android.content.Intent intent3 = null;
+        android.view.KeyEvent keyevent1 = org.mockito.Mockito.mock(android.view.KeyEvent.class);
+        org.robolectric.android.controller.ActivityController activitycontroller13 = org.robolectric.Robolectric.buildActivity(com.hermanowicz.pantry.activity.NewProductActivity.class, intent3);
+        com.hermanowicz.pantry.activity.NewProductActivity newproductactivity7 = (com.hermanowicz.pantry.activity.NewProductActivity) activitycontroller13.get();
+        org.robolectric.android.controller.ActivityController activitycontroller14 = activitycontroller13.create();
+        org.robolectric.android.controller.ActivityController activitycontroller15 = activitycontroller14.resume();
+        activitycontroller15.visible();
+        newproductactivity7.onKeyDown(4, keyevent1);
+    }
+}

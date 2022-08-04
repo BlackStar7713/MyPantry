@@ -1,0 +1,28 @@
+package com.hermanowicz.pantry.model;
+
+import org.junit.Before;
+import androidx.test.core.app.ApplicationProvider;
+import org.robolectric.RobolectricTestRunner;
+import org.junit.runner.RunWith;
+import org.junit.Test;
+
+@RunWith(RobolectricTestRunner.class)
+public class Test1097 {
+
+    @Before()
+    public void setup() {
+        org.robolectric.shadows.ShadowSQLiteConnection.reset();
+    }
+
+    /**
+     * Generated from /scratch/berreiter/action-based-test-carving/apps-src/MyPantry/traces/activities.MyPantryActivityTest#onClickOnItemInRecyclerViewNavigateToProductDetailsActivity/Trace-1659559083578.txt
+     * Method invocation under test: <com.hermanowicz.pantry.model.AppSettingsModel: void <init>(android.content.SharedPreferences)>_16_30
+     */
+    @Test(timeout = 4000)
+    public void test_com_hermanowicz_pantry_model_AppSettingsModel_constructor_001() throws Exception {
+        com.hermanowicz.pantry.model.AppSettingsModel appsettingsmodel0 = null;
+        android.content.Context context1 = ApplicationProvider.getApplicationContext();
+        android.content.SharedPreferences sharedpreferences1 = android.preference.PreferenceManager.getDefaultSharedPreferences(context1);
+        appsettingsmodel0 = new com.hermanowicz.pantry.model.AppSettingsModel(sharedpreferences1);
+    }
+}

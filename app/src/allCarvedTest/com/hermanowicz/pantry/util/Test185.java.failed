@@ -1,0 +1,27 @@
+package com.hermanowicz.pantry.util;
+
+import org.junit.Before;
+import androidx.test.core.app.ApplicationProvider;
+import org.robolectric.RobolectricTestRunner;
+import org.junit.runner.RunWith;
+import org.junit.Test;
+
+@RunWith(RobolectricTestRunner.class)
+public class Test185 {
+
+    @Before()
+    public void setup() {
+        org.robolectric.shadows.ShadowSQLiteConnection.reset();
+    }
+
+    /**
+     * Generated from /scratch/berreiter/action-based-test-carving/apps-src/MyPantry/traces/activities.MyPantryActivityTest#onSetNameFilterShouldShowProductsWithThisName/Trace-1659559133917.txt
+     * Method invocation under test: <com.hermanowicz.pantry.util.PremiumAccess: void <init>(android.content.Context)>_158_314
+     */
+    @Test(timeout = 4000)
+    public void test_com_hermanowicz_pantry_util_PremiumAccess_constructor_001() throws Exception {
+        com.hermanowicz.pantry.util.PremiumAccess premiumaccess0 = null;
+        android.content.Context context7 = ApplicationProvider.getApplicationContext();
+        premiumaccess0 = new com.hermanowicz.pantry.util.PremiumAccess(context7);
+    }
+}

@@ -1,0 +1,27 @@
+package com.hermanowicz.pantry.util;
+
+import org.junit.Before;
+import androidx.test.core.app.ApplicationProvider;
+import org.robolectric.RobolectricTestRunner;
+import org.junit.runner.RunWith;
+import org.junit.Test;
+
+@RunWith(RobolectricTestRunner.class)
+public class Test1048 {
+
+    @Before()
+    public void setup() {
+        org.robolectric.shadows.ShadowSQLiteConnection.reset();
+    }
+
+    /**
+     * Generated from /scratch/berreiter/action-based-test-carving/apps-src/MyPantry/traces/activities.NewProductActivityTest#onPressedBackNavigateToMainActivity/Trace-1659559170023.txt
+     * Method invocation under test: <com.hermanowicz.pantry.util.EmailManager: void onCreate()>_3_6
+     */
+    @Test(timeout = 4000)
+    public void test_com_hermanowicz_pantry_util_EmailManager_onCreate_001() throws Exception {
+        com.hermanowicz.pantry.util.EmailManager emailmanager1 = null;
+        emailmanager1 = new com.hermanowicz.pantry.util.EmailManager();
+        emailmanager1.onCreate();
+    }
+}

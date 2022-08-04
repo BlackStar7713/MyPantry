@@ -1,0 +1,35 @@
+package com.hermanowicz.pantry.util;
+
+import org.junit.Before;
+import androidx.test.core.app.ApplicationProvider;
+import org.robolectric.RobolectricTestRunner;
+import org.junit.runner.RunWith;
+import org.junit.Test;
+
+@RunWith(RobolectricTestRunner.class)
+public class Test596 {
+
+    @Before()
+    public void setup() {
+        org.robolectric.shadows.ShadowSQLiteConnection.reset();
+    }
+
+    /**
+     * Generated from /scratch/berreiter/action-based-test-carving/apps-src/MyPantry/traces/activities.MyPantryActivityTest#onSetVolumeFilterShouldShowProductsWithThisVolume/Trace-1659559148638.txt
+     * Method invocation under test: <com.hermanowicz.pantry.util.ProductsAdapter: void <init>(android.content.SharedPreferences)>_259_516
+     */
+    @Test(timeout = 4000)
+    public void test_com_hermanowicz_pantry_util_ProductsAdapter_constructor_001() throws Exception {
+        com.hermanowicz.pantry.util.ProductsAdapter productsadapter0 = null;
+        android.content.SharedPreferences sharedpreferences7 = org.mockito.Mockito.mock(android.content.SharedPreferences.class);
+        org.mockito.stubbing.Stubber stubber2 = org.mockito.Mockito.doReturn("0");
+        android.content.SharedPreferences sharedpreferences8 = stubber2.when(sharedpreferences7);
+        sharedpreferences8.getString("SELECTED_APPLICATION_THEME", "0");
+        org.mockito.stubbing.Stubber stubber3 = org.mockito.Mockito.doReturn("local");
+        android.content.SharedPreferences sharedpreferences9 = stubber3.when(sharedpreferences7);
+        sharedpreferences9.getString("DATABASE_MODE", "local");
+        sharedpreferences9.getString("SELECTED_APPLICATION_THEME", "0");
+        sharedpreferences9.getString("DATABASE_MODE", "local");
+        productsadapter0 = new com.hermanowicz.pantry.util.ProductsAdapter(sharedpreferences9);
+    }
+}

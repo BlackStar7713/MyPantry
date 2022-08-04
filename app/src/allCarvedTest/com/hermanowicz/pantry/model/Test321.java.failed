@@ -1,0 +1,31 @@
+package com.hermanowicz.pantry.model;
+
+import org.junit.Before;
+import androidx.test.core.app.ApplicationProvider;
+import org.robolectric.RobolectricTestRunner;
+import org.junit.runner.RunWith;
+import org.junit.Test;
+
+@RunWith(RobolectricTestRunner.class)
+public class Test321 {
+
+    @Before()
+    public void setup() {
+        org.robolectric.shadows.ShadowSQLiteConnection.reset();
+    }
+
+    /**
+     * Generated from /scratch/berreiter/action-based-test-carving/apps-src/MyPantry/traces/activities.MyPantryActivityTest#onPressedBackNavigateToMainActivity/Trace-1659559078284.txt
+     * Method invocation under test: <com.hermanowicz.pantry.model.MyPantryModel: java.util.List getGroupProductsList()>_266_529
+     */
+    @Test(timeout = 4000)
+    public void test_com_hermanowicz_pantry_model_MyPantryModel_getGroupProductsList_001() throws Exception {
+        com.hermanowicz.pantry.model.MyPantryModel mypantrymodel4 = null;
+        android.content.Context context15 = ApplicationProvider.getApplicationContext();
+        mypantrymodel4 = new com.hermanowicz.pantry.model.MyPantryModel(context15);
+        mypantrymodel4.setOfflineDbProductsList();
+        mypantrymodel4.setProductsLiveData();
+        mypantrymodel4.getProductLiveData();
+        mypantrymodel4.getGroupProductsList();
+    }
+}

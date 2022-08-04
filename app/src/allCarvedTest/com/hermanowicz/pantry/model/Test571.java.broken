@@ -1,0 +1,76 @@
+package com.hermanowicz.pantry.model;
+
+import org.junit.Before;
+import androidx.test.core.app.ApplicationProvider;
+import org.robolectric.RobolectricTestRunner;
+import org.junit.runner.RunWith;
+import org.junit.Test;
+
+@RunWith(RobolectricTestRunner.class)
+public class Test571 {
+
+    @Before()
+    public void setup() {
+        org.robolectric.shadows.ShadowSQLiteConnection.reset();
+    }
+
+    /**
+     * Generated from /scratch/berreiter/action-based-test-carving/apps-src/MyPantry/traces/activities.MainActivityTest#shouldGoToAppSettingsActivity/Trace-1659559014062.txt
+     * Method invocation under test: <com.hermanowicz.pantry.model.AppSettingsModel: int getDaysToNotification()>_439_875
+     */
+    @Test(timeout = 4000)
+    public void test_com_hermanowicz_pantry_model_AppSettingsModel_getDaysToNotification_001() throws Exception {
+        com.hermanowicz.pantry.model.AppSettingsModel appsettingsmodel5 = null;
+        com.hermanowicz.pantry.model.DatabaseMode.Mode mode4 = com.hermanowicz.pantry.model.DatabaseMode.Mode.LOCAL;
+        java.lang.Object object46 = null;
+        java.lang.Object object47 = org.mockito.Mockito.mock(android.app.SharedPreferencesImpl$EditorImpl.class);
+        org.mockito.stubbing.Stubber stubber134 = org.mockito.Mockito.doReturn(object46);
+        java.lang.Object object48 = stubber134.when(object47);
+        object48.putString("EMAIL_ADDRESS", "");
+        org.mockito.stubbing.Stubber stubber135 = org.mockito.Mockito.doNothing();
+        java.lang.Object object49 = stubber135.when(object47);
+        object49.apply();
+        android.content.SharedPreferences sharedpreferences75 = org.mockito.Mockito.mock(android.content.SharedPreferences.class);
+        org.mockito.stubbing.Stubber stubber136 = org.mockito.Mockito.doReturn("0");
+        android.content.SharedPreferences sharedpreferences76 = stubber136.when(sharedpreferences75);
+        sharedpreferences76.getString("SELECTED_APPLICATION_THEME", "0");
+        org.mockito.stubbing.Stubber stubber137 = org.mockito.Mockito.doReturn("local");
+        android.content.SharedPreferences sharedpreferences77 = stubber137.when(sharedpreferences75);
+        sharedpreferences77.getString("DATABASE_MODE", "local");
+        org.mockito.stubbing.Stubber stubber138 = org.mockito.Mockito.doReturn(false);
+        android.content.SharedPreferences sharedpreferences78 = stubber138.when(sharedpreferences75);
+        sharedpreferences78.getBoolean("IS_NOTIFICATIONS_TO_RESTORE", false);
+        org.mockito.stubbing.Stubber stubber139 = org.mockito.Mockito.doReturn("0");
+        android.content.SharedPreferences sharedpreferences79 = stubber139.when(sharedpreferences75);
+        sharedpreferences79.getString("SELECTED_APPLICATION_THEME", "0");
+        org.mockito.stubbing.Stubber stubber140 = org.mockito.Mockito.doReturn("0");
+        android.content.SharedPreferences sharedpreferences80 = stubber140.when(sharedpreferences75);
+        sharedpreferences80.getString("SELECTED_APPLICATION_THEME", "0");
+        org.mockito.stubbing.Stubber stubber141 = org.mockito.Mockito.doReturn("0");
+        android.content.SharedPreferences sharedpreferences81 = stubber141.when(sharedpreferences75);
+        sharedpreferences81.getString("SCAN_CAMERA", "0");
+        org.mockito.stubbing.Stubber stubber142 = org.mockito.Mockito.doReturn("local");
+        android.content.SharedPreferences sharedpreferences82 = stubber142.when(sharedpreferences75);
+        sharedpreferences82.getString("DATABASE_MODE", "local");
+        org.mockito.stubbing.Stubber stubber143 = org.mockito.Mockito.doReturn("");
+        android.content.SharedPreferences sharedpreferences83 = stubber143.when(sharedpreferences75);
+        sharedpreferences83.getString("EMAIL_ADDRESS", "");
+        org.mockito.stubbing.Stubber stubber144 = org.mockito.Mockito.doReturn(object49);
+        android.content.SharedPreferences sharedpreferences84 = stubber144.when(sharedpreferences75);
+        sharedpreferences84.edit();
+        org.mockito.stubbing.Stubber stubber145 = org.mockito.Mockito.doReturn("3");
+        android.content.SharedPreferences sharedpreferences85 = stubber145.when(sharedpreferences75);
+        sharedpreferences85.getString("HOW_MANY_DAYS_BEFORE_EXPIRATION_DATE_SEND_A_NOTIFICATION?", "3");
+        sharedpreferences85.getString("SELECTED_APPLICATION_THEME", "0");
+        sharedpreferences85.getString("DATABASE_MODE", "local");
+        sharedpreferences85.getBoolean("IS_NOTIFICATIONS_TO_RESTORE", false);
+        sharedpreferences85.getString("SELECTED_APPLICATION_THEME", "0");
+        appsettingsmodel5 = new com.hermanowicz.pantry.model.AppSettingsModel(sharedpreferences85);
+        appsettingsmodel5.getSelectedAppTheme();
+        appsettingsmodel5.getSelectedScanCamera();
+        appsettingsmodel5.getDatabaseMode();
+        appsettingsmodel5.isValidEmail();
+        appsettingsmodel5.clearEmailAddress();
+        appsettingsmodel5.getDaysToNotification();
+    }
+}

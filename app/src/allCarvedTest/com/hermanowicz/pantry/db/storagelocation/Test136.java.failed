@@ -1,0 +1,36 @@
+package com.hermanowicz.pantry.db.storagelocation;
+
+import org.junit.Before;
+import androidx.test.core.app.ApplicationProvider;
+import org.robolectric.RobolectricTestRunner;
+import org.junit.runner.RunWith;
+import org.junit.Test;
+
+@RunWith(RobolectricTestRunner.class)
+public class Test136 {
+
+    @Before()
+    public void setup() {
+        org.robolectric.shadows.ShadowSQLiteConnection.reset();
+    }
+
+    /**
+     * Generated from /scratch/berreiter/action-based-test-carving/apps-src/MyPantry/traces/activities.MyPantryActivityTest#onClickOnEditProductInProductDetailsShouldNavigateToEditProductActivity/Trace-1659559113343.txt
+     * Method invocation under test: <com.hermanowicz.pantry.db.storagelocation.StorageLocationDao_Impl: java.util.List getAllStorageLocations()>_6289_12574
+     */
+    @Test(timeout = 4000)
+    public void test_com_hermanowicz_pantry_db_storagelocation_StorageLocationDao_Impl_getAllStorageLocations_001() throws Exception {
+        com.hermanowicz.pantry.db.storagelocation.StorageLocationDb_Impl storagelocationdb_impl7 = null;
+        androidx.room.DatabaseConfiguration databaseconfiguration33 = org.mockito.Mockito.mock(androidx.room.DatabaseConfiguration.class);
+        java.util.HashMap hashmap36 = org.mockito.Mockito.mock(java.util.HashMap.class);
+        storagelocationdb_impl7 = new com.hermanowicz.pantry.db.storagelocation.StorageLocationDb_Impl();
+        storagelocationdb_impl7.createOpenHelper(databaseconfiguration33);
+        storagelocationdb_impl7.getRequiredAutoMigrationSpecs();
+        storagelocationdb_impl7.getAutoMigrations(hashmap36);
+        storagelocationdb_impl7.getRequiredTypeConverters();
+        com.hermanowicz.pantry.db.storagelocation.StorageLocationDao_Impl storagelocationdao_impl5 = (com.hermanowicz.pantry.db.storagelocation.StorageLocationDao_Impl) storagelocationdb_impl7.storageLocationDao();
+        storagelocationdao_impl5.getAllStorageLocationsArray();
+        com.hermanowicz.pantry.db.storagelocation.StorageLocationDao_Impl storagelocationdao_impl6 = (com.hermanowicz.pantry.db.storagelocation.StorageLocationDao_Impl) storagelocationdb_impl7.storageLocationDao();
+        storagelocationdao_impl6.getAllStorageLocations();
+    }
+}

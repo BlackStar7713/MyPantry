@@ -1,0 +1,103 @@
+package com.hermanowicz.pantry.presenter;
+
+import org.junit.Before;
+import androidx.test.core.app.ApplicationProvider;
+import org.robolectric.RobolectricTestRunner;
+import org.junit.runner.RunWith;
+import org.junit.Test;
+
+@RunWith(RobolectricTestRunner.class)
+public class Test336 {
+
+    @Before()
+    public void setup() {
+        org.robolectric.shadows.ShadowSQLiteConnection.reset();
+    }
+
+    /**
+     * Generated from /scratch/berreiter/action-based-test-carving/apps-src/MyPantry/traces/activities.MyPantryActivityTest#onPressedBackNavigateToMainActivity/Trace-1659559078284.txt
+     * Method invocation under test: <com.hermanowicz.pantry.presenter.MainPresenter: long getPressedBackTime()>_486_971
+     */
+    @Test(timeout = 4000)
+    public void test_com_hermanowicz_pantry_presenter_MainPresenter_getPressedBackTime_001() throws Exception {
+        android.content.Context context32 = null;
+        com.hermanowicz.pantry.activity.MainActivity mainactivity8 = null;
+        java.lang.Object object92 = org.mockito.Mockito.mock(java.util.Iterator.class);
+        org.mockito.stubbing.Stubber stubber214 = org.mockito.Mockito.doReturn(false);
+        java.lang.Object object93 = stubber214.when(object92);
+        object93.hasNext();
+        com.hermanowicz.pantry.util.PremiumAccess premiumaccess16 = org.mockito.Mockito.mock(com.hermanowicz.pantry.util.PremiumAccess.class);
+        org.mockito.stubbing.Stubber stubber215 = org.mockito.Mockito.doNothing();
+        com.hermanowicz.pantry.util.PremiumAccess premiumaccess17 = stubber215.when(premiumaccess16);
+        premiumaccess17 = new com.hermanowicz.pantry.util.PremiumAccess(context32);
+        org.mockito.stubbing.Stubber stubber216 = org.mockito.Mockito.doNothing();
+        com.hermanowicz.pantry.util.PremiumAccess premiumaccess18 = stubber216.when(premiumaccess16);
+        premiumaccess18 = new java.lang.Object();
+        java.util.ArrayList arraylist101 = org.mockito.Mockito.mock(java.util.ArrayList.class);
+        org.mockito.stubbing.Stubber stubber217 = org.mockito.Mockito.doNothing();
+        java.util.ArrayList arraylist102 = stubber217.when(arraylist101);
+        arraylist102 = new java.util.ArrayList(0);
+        java.util.ArrayList arraylist103 = org.mockito.Mockito.mock(java.util.ArrayList.class);
+        org.mockito.stubbing.Stubber stubber218 = org.mockito.Mockito.doReturn(object93);
+        java.util.ArrayList arraylist104 = stubber218.when(arraylist103);
+        arraylist104.iterator();
+        java.lang.Object object94 = org.mockito.Mockito.mock(retrofit2.DefaultCallAdapterFactory$ExecutorCallbackCall.class);
+        org.mockito.stubbing.Stubber stubber219 = org.mockito.Mockito.doNothing();
+        java.lang.Object object95 = stubber219.when(object94);
+        object95.enqueue(mainactivity8);
+        retrofit2.Response response15 = org.mockito.Mockito.mock(retrofit2.Response.class);
+        org.mockito.stubbing.Stubber stubber220 = org.mockito.Mockito.doReturn(true);
+        retrofit2.Response response16 = stubber220.when(response15);
+        response16.isSuccessful();
+        org.mockito.stubbing.Stubber stubber221 = org.mockito.Mockito.doReturn(arraylist104);
+        retrofit2.Response response17 = stubber221.when(response15);
+        response17.body();
+        android.content.SharedPreferences sharedpreferences28 = org.mockito.Mockito.mock(android.content.SharedPreferences.class);
+        org.mockito.stubbing.Stubber stubber222 = org.mockito.Mockito.doReturn("0");
+        android.content.SharedPreferences sharedpreferences29 = stubber222.when(sharedpreferences28);
+        sharedpreferences29.getString("SELECTED_APPLICATION_THEME", "0");
+        org.mockito.stubbing.Stubber stubber223 = org.mockito.Mockito.doReturn("local");
+        android.content.SharedPreferences sharedpreferences30 = stubber223.when(sharedpreferences28);
+        sharedpreferences30.getString("DATABASE_MODE", "local");
+        org.mockito.stubbing.Stubber stubber224 = org.mockito.Mockito.doReturn("0");
+        android.content.SharedPreferences sharedpreferences31 = stubber224.when(sharedpreferences28);
+        sharedpreferences31.getString("SELECTED_APPLICATION_THEME", "0");
+        org.mockito.stubbing.Stubber stubber225 = org.mockito.Mockito.doReturn("local");
+        android.content.SharedPreferences sharedpreferences32 = stubber225.when(sharedpreferences28);
+        sharedpreferences32.getString("DATABASE_MODE", "local");
+        org.mockito.stubbing.Stubber stubber226 = org.mockito.Mockito.doReturn(false);
+        android.content.SharedPreferences sharedpreferences33 = stubber226.when(sharedpreferences28);
+        sharedpreferences33.getBoolean("IS_NOTIFICATIONS_TO_RESTORE", false);
+        com.hermanowicz.pantry.presenter.MainPresenter mainpresenter8 = org.mockito.Mockito.mock(com.hermanowicz.pantry.presenter.MainPresenter.class);
+        org.mockito.stubbing.Stubber stubber227 = org.mockito.Mockito.doNothing();
+        com.hermanowicz.pantry.presenter.MainPresenter mainpresenter9 = stubber227.when(mainpresenter8);
+        mainpresenter9 = new com.hermanowicz.pantry.presenter.MainPresenter(mainactivity8, mainactivity8, sharedpreferences33);
+        org.mockito.stubbing.Stubber stubber228 = org.mockito.Mockito.doNothing();
+        com.hermanowicz.pantry.presenter.MainPresenter mainpresenter10 = stubber228.when(mainpresenter8);
+        mainpresenter10 = new java.lang.Object();
+        org.mockito.stubbing.Stubber stubber229 = org.mockito.Mockito.doNothing();
+        com.hermanowicz.pantry.presenter.MainPresenter mainpresenter11 = stubber229.when(mainpresenter8);
+        mainpresenter11.setPremiumAccess(premiumaccess18);
+        org.mockito.stubbing.Stubber stubber230 = org.mockito.Mockito.doNothing();
+        com.hermanowicz.pantry.presenter.MainPresenter mainpresenter12 = stubber230.when(mainpresenter8);
+        mainpresenter12.updateUserData();
+        org.mockito.stubbing.Stubber stubber231 = org.mockito.Mockito.doReturn(true);
+        com.hermanowicz.pantry.presenter.MainPresenter mainpresenter13 = stubber231.when(mainpresenter8);
+        mainpresenter13.isOfflineDb();
+        org.mockito.stubbing.Stubber stubber232 = org.mockito.Mockito.doNothing();
+        com.hermanowicz.pantry.presenter.MainPresenter mainpresenter14 = stubber232.when(mainpresenter8);
+        mainpresenter14.restoreNotifications(context32, arraylist102);
+        org.mockito.stubbing.Stubber stubber233 = org.mockito.Mockito.doReturn(0L);
+        com.hermanowicz.pantry.presenter.MainPresenter mainpresenter15 = stubber233.when(mainpresenter8);
+        mainpresenter15.getPressedBackTime();
+        ApplicationProvider.getApplicationContext();
+        sharedpreferences33.getString("SELECTED_APPLICATION_THEME", "0");
+        sharedpreferences33.getString("DATABASE_MODE", "local");
+        org.robolectric.android.controller.ActivityController activitycontroller27 = org.robolectric.Robolectric.buildActivity(com.hermanowicz.pantry.activity.MainActivity.class);
+        com.hermanowicz.pantry.activity.MainActivity mainactivity9 = (com.hermanowicz.pantry.activity.MainActivity) activitycontroller27.get();
+        org.robolectric.android.controller.ActivityController activitycontroller28 = activitycontroller27.create();
+        activitycontroller28.resume();
+        mainactivity9.onResponse(object95, response17);
+        mainpresenter15.getPressedBackTime();
+    }
+}

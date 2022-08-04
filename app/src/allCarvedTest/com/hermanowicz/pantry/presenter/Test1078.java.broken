@@ -1,0 +1,73 @@
+package com.hermanowicz.pantry.presenter;
+
+import org.junit.Before;
+import androidx.test.core.app.ApplicationProvider;
+import org.robolectric.RobolectricTestRunner;
+import org.junit.runner.RunWith;
+import org.junit.Test;
+
+@RunWith(RobolectricTestRunner.class)
+public class Test1078 {
+
+    @Before()
+    public void setup() {
+        org.robolectric.shadows.ShadowSQLiteConnection.reset();
+    }
+
+    /**
+     * Generated from /scratch/berreiter/action-based-test-carving/apps-src/MyPantry/traces/activities.NewProductActivityTest#onPressedBackNavigateToMainActivity/Trace-1659559170023.txt
+     * Method invocation under test: <com.hermanowicz.pantry.presenter.NewProductPresenter: boolean isFormNotFilled()>_447_893
+     */
+    @Test(timeout = 4000)
+    public void test_com_hermanowicz_pantry_presenter_NewProductPresenter_isFormNotFilled_001() throws Exception {
+        android.content.Context context10 = null;
+        java.lang.String[] string2 = null;
+        android.content.Intent intent4 = null;
+        java.util.List list20 = null;
+        com.hermanowicz.pantry.activity.NewProductActivity newproductactivity8 = null;
+        string2 = new java.lang.String[0];
+        string2 = new java.lang.String[0];
+        com.hermanowicz.pantry.util.PremiumAccess premiumaccess4 = org.mockito.Mockito.mock(com.hermanowicz.pantry.util.PremiumAccess.class);
+        org.mockito.stubbing.Stubber stubber11 = org.mockito.Mockito.doNothing();
+        com.hermanowicz.pantry.util.PremiumAccess premiumaccess5 = stubber11.when(premiumaccess4);
+        premiumaccess5 = new com.hermanowicz.pantry.util.PremiumAccess(context10);
+        org.mockito.stubbing.Stubber stubber12 = org.mockito.Mockito.doNothing();
+        com.hermanowicz.pantry.util.PremiumAccess premiumaccess6 = stubber12.when(premiumaccess4);
+        premiumaccess6 = new java.lang.Object();
+        com.hermanowicz.pantry.presenter.NewProductPresenter newproductpresenter10 = org.mockito.Mockito.mock(com.hermanowicz.pantry.presenter.NewProductPresenter.class);
+        org.mockito.stubbing.Stubber stubber13 = org.mockito.Mockito.doNothing();
+        com.hermanowicz.pantry.presenter.NewProductPresenter newproductpresenter11 = stubber13.when(newproductpresenter10);
+        newproductpresenter11 = new com.hermanowicz.pantry.presenter.NewProductPresenter(newproductactivity8, context10);
+        org.mockito.stubbing.Stubber stubber14 = org.mockito.Mockito.doNothing();
+        com.hermanowicz.pantry.presenter.NewProductPresenter newproductpresenter12 = stubber14.when(newproductpresenter10);
+        newproductpresenter12 = new java.lang.Object();
+        org.mockito.stubbing.Stubber stubber15 = org.mockito.Mockito.doNothing();
+        com.hermanowicz.pantry.presenter.NewProductPresenter newproductpresenter13 = stubber15.when(newproductpresenter10);
+        newproductpresenter13.setPremiumAccess(premiumaccess6);
+        org.mockito.stubbing.Stubber stubber16 = org.mockito.Mockito.doReturn(true);
+        com.hermanowicz.pantry.presenter.NewProductPresenter newproductpresenter14 = stubber16.when(newproductpresenter10);
+        newproductpresenter14.isOfflineDb();
+        org.mockito.stubbing.Stubber stubber17 = org.mockito.Mockito.doNothing();
+        com.hermanowicz.pantry.presenter.NewProductPresenter newproductpresenter15 = stubber17.when(newproductpresenter10);
+        newproductpresenter15.setAllProductList(list20);
+        org.mockito.stubbing.Stubber stubber18 = org.mockito.Mockito.doReturn(true);
+        com.hermanowicz.pantry.presenter.NewProductPresenter newproductpresenter16 = stubber18.when(newproductpresenter10);
+        newproductpresenter16.isOfflineDb();
+        org.mockito.stubbing.Stubber stubber19 = org.mockito.Mockito.doReturn(string2);
+        com.hermanowicz.pantry.presenter.NewProductPresenter newproductpresenter17 = stubber19.when(newproductpresenter10);
+        newproductpresenter17.getStorageLocationsArray();
+        org.mockito.stubbing.Stubber stubber20 = org.mockito.Mockito.doReturn(true);
+        com.hermanowicz.pantry.presenter.NewProductPresenter newproductpresenter18 = stubber20.when(newproductpresenter10);
+        newproductpresenter18.isOfflineDb();
+        org.mockito.stubbing.Stubber stubber21 = org.mockito.Mockito.doReturn(true);
+        com.hermanowicz.pantry.presenter.NewProductPresenter newproductpresenter19 = stubber21.when(newproductpresenter10);
+        newproductpresenter19.isFormNotFilled();
+        ApplicationProvider.getApplicationContext();
+        org.robolectric.android.controller.ActivityController activitycontroller18 = org.robolectric.Robolectric.buildActivity(com.hermanowicz.pantry.activity.NewProductActivity.class, intent4);
+        activitycontroller18.get();
+        org.robolectric.android.controller.ActivityController activitycontroller19 = activitycontroller18.create();
+        org.robolectric.android.controller.ActivityController activitycontroller20 = activitycontroller19.resume();
+        activitycontroller20.visible();
+        newproductpresenter19.isFormNotFilled();
+    }
+}

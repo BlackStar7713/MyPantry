@@ -1,0 +1,37 @@
+package com.hermanowicz.pantry.model;
+
+import org.junit.Before;
+import androidx.test.core.app.ApplicationProvider;
+import org.robolectric.RobolectricTestRunner;
+import org.junit.runner.RunWith;
+import org.junit.Test;
+
+@RunWith(RobolectricTestRunner.class)
+public class Test1195 {
+
+    @Before()
+    public void setup() {
+        org.robolectric.shadows.ShadowSQLiteConnection.reset();
+    }
+
+    /**
+     * Generated from /scratch/berreiter/action-based-test-carving/apps-src/MyPantry/traces/activities.MyPantryActivityTest#onClickOnItemInRecyclerViewNavigateToProductDetailsActivity/Trace-1659559083578.txt
+     * Method invocation under test: <com.hermanowicz.pantry.model.ProductDataModel: boolean isProductListEmpty()>_4571_9139
+     */
+    @Test(timeout = 4000)
+    public void test_com_hermanowicz_pantry_model_ProductDataModel_isProductListEmpty_001() throws Exception {
+        android.content.Intent intent8 = null;
+        com.hermanowicz.pantry.model.ProductDataModel productdatamodel6 = null;
+        intent8 = new android.content.Intent();
+        android.content.Context context45 = ApplicationProvider.getApplicationContext();
+        productdatamodel6 = new com.hermanowicz.pantry.model.ProductDataModel(context45);
+        java.util.ArrayList arraylist103 = intent8.getParcelableArrayListExtra("product_list");
+        java.util.ArrayList arraylist104 = intent8.getParcelableArrayListExtra("all_product_list");
+        productdatamodel6.setAllProductList(arraylist104);
+        productdatamodel6.setProductList(arraylist103);
+        productdatamodel6.setProduct(3);
+        productdatamodel6.setHashCode("235983629");
+        productdatamodel6.getHashCode();
+        productdatamodel6.isProductListEmpty();
+    }
+}

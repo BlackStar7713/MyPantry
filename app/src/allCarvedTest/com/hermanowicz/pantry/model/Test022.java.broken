@@ -1,0 +1,37 @@
+package com.hermanowicz.pantry.model;
+
+import org.junit.Before;
+import androidx.test.core.app.ApplicationProvider;
+import org.robolectric.RobolectricTestRunner;
+import org.junit.runner.RunWith;
+import org.junit.Test;
+
+@RunWith(RobolectricTestRunner.class)
+public class Test022 {
+
+    @Before()
+    public void setup() {
+        org.robolectric.shadows.ShadowSQLiteConnection.reset();
+    }
+
+    /**
+     * Generated from /scratch/berreiter/action-based-test-carving/apps-src/MyPantry/traces/activities.MainActivityTest#shouldGoToScanProductActivity/Trace-1659558937116.txt
+     * Method invocation under test: <com.hermanowicz.pantry.model.ScanProductModel: void setOfflineAllProductList()>_328_653
+     */
+    @Test(timeout = 4000)
+    public void test_com_hermanowicz_pantry_model_ScanProductModel_setOfflineAllProductList_001() throws Exception {
+        com.hermanowicz.pantry.model.ScanProductModel scanproductmodel1 = null;
+        com.hermanowicz.pantry.db.product.ProductDb_Impl productdb_impl8 = null;
+        androidx.room.DatabaseConfiguration databaseconfiguration15 = org.mockito.Mockito.mock(androidx.room.DatabaseConfiguration.class);
+        java.util.HashMap hashmap20 = org.mockito.Mockito.mock(java.util.HashMap.class);
+        productdb_impl8 = new com.hermanowicz.pantry.db.product.ProductDb_Impl();
+        productdb_impl8.createOpenHelper(databaseconfiguration15);
+        productdb_impl8.getRequiredAutoMigrationSpecs();
+        productdb_impl8.getAutoMigrations(hashmap20);
+        productdb_impl8.getRequiredTypeConverters();
+        productdb_impl8.productsDao();
+        productdb_impl8.assertNotSuspendingTransaction();
+        scanproductmodel1 = new com.hermanowicz.pantry.model.ScanProductModel(productdb_impl8);
+        scanproductmodel1.setOfflineAllProductList();
+    }
+}

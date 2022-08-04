@@ -1,0 +1,90 @@
+package com.hermanowicz.pantry.db.product;
+
+import org.junit.Before;
+import androidx.test.core.app.ApplicationProvider;
+import org.robolectric.RobolectricTestRunner;
+import org.junit.runner.RunWith;
+import org.junit.Test;
+
+@RunWith(RobolectricTestRunner.class)
+public class Test926 {
+
+    @Before()
+    public void setup() {
+        org.robolectric.shadows.ShadowSQLiteConnection.reset();
+    }
+
+    /**
+     * Generated from /scratch/berreiter/action-based-test-carving/apps-src/MyPantry/traces/activities.NewProductActivityTest#addingTheProductShouldNavigateToPrintQRDetailsActivity/Trace-1659559163567.txt
+     * Method invocation under test: <com.hermanowicz.pantry.db.product.Product: void <init>(android.os.Parcel)>_1838_3672
+     */
+    @Test(timeout = 4000)
+    public void test_com_hermanowicz_pantry_db_product_Product_constructor_002() throws Exception {
+        com.hermanowicz.pantry.db.product.Product product713 = null;
+        android.os.Parcel parcel66 = org.mockito.Mockito.mock(android.os.Parcel.class);
+        org.mockito.stubbing.Stubber stubber1163 = org.mockito.Mockito.doReturn(1);
+        android.os.Parcel parcel67 = stubber1163.when(parcel66);
+        parcel67.readInt();
+        org.mockito.stubbing.Stubber stubber1164 = org.mockito.Mockito.doReturn("Raspberry juice");
+        android.os.Parcel parcel68 = stubber1164.when(parcel66);
+        parcel68.readString();
+        org.mockito.stubbing.Stubber stubber1165 = org.mockito.Mockito.doReturn("168177850");
+        android.os.Parcel parcel69 = stubber1165.when(parcel66);
+        parcel69.readString();
+        org.mockito.stubbing.Stubber stubber1166 = org.mockito.Mockito.doReturn("Vegetables");
+        android.os.Parcel parcel70 = stubber1166.when(parcel66);
+        parcel70.readString();
+        org.mockito.stubbing.Stubber stubber1167 = org.mockito.Mockito.doReturn("null");
+        android.os.Parcel parcel71 = stubber1167.when(parcel66);
+        parcel71.readString();
+        org.mockito.stubbing.Stubber stubber1168 = org.mockito.Mockito.doReturn("");
+        android.os.Parcel parcel72 = stubber1168.when(parcel66);
+        parcel72.readString();
+        org.mockito.stubbing.Stubber stubber1169 = org.mockito.Mockito.doReturn("-");
+        android.os.Parcel parcel73 = stubber1169.when(parcel66);
+        parcel73.readString();
+        org.mockito.stubbing.Stubber stubber1170 = org.mockito.Mockito.doReturn("-");
+        android.os.Parcel parcel74 = stubber1170.when(parcel66);
+        parcel74.readString();
+        org.mockito.stubbing.Stubber stubber1171 = org.mockito.Mockito.doReturn("Raspberries");
+        android.os.Parcel parcel75 = stubber1171.when(parcel66);
+        parcel75.readString();
+        org.mockito.stubbing.Stubber stubber1172 = org.mockito.Mockito.doReturn("");
+        android.os.Parcel parcel76 = stubber1172.when(parcel66);
+        parcel76.readString();
+        org.mockito.stubbing.Stubber stubber1173 = org.mockito.Mockito.doReturn("Much");
+        android.os.Parcel parcel77 = stubber1173.when(parcel66);
+        parcel77.readString();
+        org.mockito.stubbing.Stubber stubber1174 = org.mockito.Mockito.doReturn(500);
+        android.os.Parcel parcel78 = stubber1174.when(parcel66);
+        parcel78.readInt();
+        org.mockito.stubbing.Stubber stubber1175 = org.mockito.Mockito.doReturn(1000);
+        android.os.Parcel parcel79 = stubber1175.when(parcel66);
+        parcel79.readInt();
+        org.mockito.stubbing.Stubber stubber1176 = org.mockito.Mockito.doReturn(0);
+        android.os.Parcel parcel80 = stubber1176.when(parcel66);
+        parcel80.readByte();
+        org.mockito.stubbing.Stubber stubber1177 = org.mockito.Mockito.doReturn(0);
+        android.os.Parcel parcel81 = stubber1177.when(parcel66);
+        parcel81.readByte();
+        org.mockito.stubbing.Stubber stubber1178 = org.mockito.Mockito.doReturn(0);
+        android.os.Parcel parcel82 = stubber1178.when(parcel66);
+        parcel82.readByte();
+        org.mockito.stubbing.Stubber stubber1179 = org.mockito.Mockito.doReturn(0);
+        android.os.Parcel parcel83 = stubber1179.when(parcel66);
+        parcel83.readByte();
+        org.mockito.stubbing.Stubber stubber1180 = org.mockito.Mockito.doReturn("Sweet");
+        android.os.Parcel parcel84 = stubber1180.when(parcel66);
+        parcel84.readString();
+        org.mockito.stubbing.Stubber stubber1181 = org.mockito.Mockito.doReturn("");
+        android.os.Parcel parcel85 = stubber1181.when(parcel66);
+        parcel85.readString();
+        org.mockito.stubbing.Stubber stubber1182 = org.mockito.Mockito.doReturn("");
+        android.os.Parcel parcel86 = stubber1182.when(parcel66);
+        parcel86.readString();
+        org.mockito.stubbing.Stubber stubber1183 = org.mockito.Mockito.doReturn("");
+        android.os.Parcel parcel87 = stubber1183.when(parcel66);
+        parcel87.readString();
+        product713 = new com.hermanowicz.pantry.db.product.Product(parcel87);
+    }
+}

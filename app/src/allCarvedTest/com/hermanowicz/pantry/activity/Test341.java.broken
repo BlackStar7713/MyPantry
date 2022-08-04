@@ -1,0 +1,53 @@
+package com.hermanowicz.pantry.activity;
+
+import org.junit.Before;
+import androidx.test.core.app.ApplicationProvider;
+import org.robolectric.RobolectricTestRunner;
+import org.junit.runner.RunWith;
+import org.junit.Test;
+
+@RunWith(RobolectricTestRunner.class)
+public class Test341 {
+
+    @Before()
+    public void setup() {
+        org.robolectric.shadows.ShadowSQLiteConnection.reset();
+    }
+
+    /**
+     * Generated from /scratch/berreiter/action-based-test-carving/apps-src/MyPantry/traces/activities.MyPantryActivityTest#onPressedBackNavigateToMainActivity/Trace-1659559078284.txt
+     * Method invocation under test: <com.hermanowicz.pantry.activity.MainActivity: void onPause()>_503_1006
+     */
+    @Test(timeout = 4000)
+    public void test_com_hermanowicz_pantry_activity_MainActivity_onPause_001() throws Exception {
+        com.hermanowicz.pantry.activity.MainActivity mainactivity14 = null;
+        java.lang.Object object134 = org.mockito.Mockito.mock(java.util.Iterator.class);
+        org.mockito.stubbing.Stubber stubber315 = org.mockito.Mockito.doReturn(false);
+        java.lang.Object object135 = stubber315.when(object134);
+        object135.hasNext();
+        java.util.ArrayList arraylist142 = org.mockito.Mockito.mock(java.util.ArrayList.class);
+        org.mockito.stubbing.Stubber stubber316 = org.mockito.Mockito.doReturn(object135);
+        java.util.ArrayList arraylist143 = stubber316.when(arraylist142);
+        arraylist143.iterator();
+        java.lang.Object object136 = org.mockito.Mockito.mock(retrofit2.DefaultCallAdapterFactory$ExecutorCallbackCall.class);
+        org.mockito.stubbing.Stubber stubber317 = org.mockito.Mockito.doNothing();
+        java.lang.Object object137 = stubber317.when(object136);
+        object137.enqueue(mainactivity14);
+        android.view.KeyEvent keyevent13 = org.mockito.Mockito.mock(android.view.KeyEvent.class);
+        retrofit2.Response response33 = org.mockito.Mockito.mock(retrofit2.Response.class);
+        org.mockito.stubbing.Stubber stubber318 = org.mockito.Mockito.doReturn(true);
+        retrofit2.Response response34 = stubber318.when(response33);
+        response34.isSuccessful();
+        org.mockito.stubbing.Stubber stubber319 = org.mockito.Mockito.doReturn(arraylist143);
+        retrofit2.Response response35 = stubber319.when(response33);
+        response35.body();
+        org.robolectric.android.controller.ActivityController activitycontroller41 = org.robolectric.Robolectric.buildActivity(com.hermanowicz.pantry.activity.MainActivity.class);
+        com.hermanowicz.pantry.activity.MainActivity mainactivity15 = (com.hermanowicz.pantry.activity.MainActivity) activitycontroller41.get();
+        org.robolectric.android.controller.ActivityController activitycontroller42 = activitycontroller41.create();
+        org.robolectric.android.controller.ActivityController activitycontroller43 = activitycontroller42.resume();
+        mainactivity15.onResponse(object137, response35);
+        mainactivity15.onKeyDown(4, keyevent13);
+        mainactivity15.finish();
+        activitycontroller43.pause();
+    }
+}

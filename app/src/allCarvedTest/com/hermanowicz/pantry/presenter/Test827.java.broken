@@ -1,0 +1,75 @@
+package com.hermanowicz.pantry.presenter;
+
+import org.junit.Before;
+import androidx.test.core.app.ApplicationProvider;
+import org.robolectric.RobolectricTestRunner;
+import org.junit.runner.RunWith;
+import org.junit.Test;
+
+@RunWith(RobolectricTestRunner.class)
+public class Test827 {
+
+    @Before()
+    public void setup() {
+        org.robolectric.shadows.ShadowSQLiteConnection.reset();
+    }
+
+    /**
+     * Generated from /scratch/berreiter/action-based-test-carving/apps-src/MyPantry/traces/activities.NewProductActivityTest#notSpecifyingTheProductNameShouldDisplayAnError/Trace-1659559175914.txt
+     * Method invocation under test: <com.hermanowicz.pantry.presenter.NewProductPresenter: void setTaste(android.widget.RadioButton)>_532_1060
+     */
+    @Test(timeout = 4000)
+    public void test_com_hermanowicz_pantry_presenter_NewProductPresenter_setTaste_001() throws Exception {
+        android.content.Context context12 = null;
+        androidx.appcompat.widget.AppCompatRadioButton appcompatradiobutton4 = null;
+        com.hermanowicz.pantry.activity.NewProductActivity newproductactivity10 = null;
+        java.lang.String[] string4 = null;
+        java.util.List list21 = null;
+        android.content.Intent intent5 = null;
+        string4 = new java.lang.String[0];
+        string4 = new java.lang.String[0];
+        com.hermanowicz.pantry.util.PremiumAccess premiumaccess10 = org.mockito.Mockito.mock(com.hermanowicz.pantry.util.PremiumAccess.class);
+        org.mockito.stubbing.Stubber stubber71 = org.mockito.Mockito.doNothing();
+        com.hermanowicz.pantry.util.PremiumAccess premiumaccess11 = stubber71.when(premiumaccess10);
+        premiumaccess11 = new com.hermanowicz.pantry.util.PremiumAccess(context12);
+        org.mockito.stubbing.Stubber stubber72 = org.mockito.Mockito.doNothing();
+        com.hermanowicz.pantry.util.PremiumAccess premiumaccess12 = stubber72.when(premiumaccess10);
+        premiumaccess12 = new java.lang.Object();
+        com.hermanowicz.pantry.presenter.NewProductPresenter newproductpresenter36 = org.mockito.Mockito.mock(com.hermanowicz.pantry.presenter.NewProductPresenter.class);
+        org.mockito.stubbing.Stubber stubber73 = org.mockito.Mockito.doNothing();
+        com.hermanowicz.pantry.presenter.NewProductPresenter newproductpresenter37 = stubber73.when(newproductpresenter36);
+        newproductpresenter37 = new com.hermanowicz.pantry.presenter.NewProductPresenter(newproductactivity10, context12);
+        org.mockito.stubbing.Stubber stubber74 = org.mockito.Mockito.doNothing();
+        com.hermanowicz.pantry.presenter.NewProductPresenter newproductpresenter38 = stubber74.when(newproductpresenter36);
+        newproductpresenter38 = new java.lang.Object();
+        org.mockito.stubbing.Stubber stubber75 = org.mockito.Mockito.doNothing();
+        com.hermanowicz.pantry.presenter.NewProductPresenter newproductpresenter39 = stubber75.when(newproductpresenter36);
+        newproductpresenter39.setPremiumAccess(premiumaccess12);
+        org.mockito.stubbing.Stubber stubber76 = org.mockito.Mockito.doReturn(true);
+        com.hermanowicz.pantry.presenter.NewProductPresenter newproductpresenter40 = stubber76.when(newproductpresenter36);
+        newproductpresenter40.isOfflineDb();
+        org.mockito.stubbing.Stubber stubber77 = org.mockito.Mockito.doNothing();
+        com.hermanowicz.pantry.presenter.NewProductPresenter newproductpresenter41 = stubber77.when(newproductpresenter36);
+        newproductpresenter41.setAllProductList(list21);
+        org.mockito.stubbing.Stubber stubber78 = org.mockito.Mockito.doReturn(true);
+        com.hermanowicz.pantry.presenter.NewProductPresenter newproductpresenter42 = stubber78.when(newproductpresenter36);
+        newproductpresenter42.isOfflineDb();
+        org.mockito.stubbing.Stubber stubber79 = org.mockito.Mockito.doReturn(string4);
+        com.hermanowicz.pantry.presenter.NewProductPresenter newproductpresenter43 = stubber79.when(newproductpresenter36);
+        newproductpresenter43.getStorageLocationsArray();
+        org.mockito.stubbing.Stubber stubber80 = org.mockito.Mockito.doReturn(true);
+        com.hermanowicz.pantry.presenter.NewProductPresenter newproductpresenter44 = stubber80.when(newproductpresenter36);
+        newproductpresenter44.isOfflineDb();
+        org.mockito.stubbing.Stubber stubber81 = org.mockito.Mockito.doNothing();
+        com.hermanowicz.pantry.presenter.NewProductPresenter newproductpresenter45 = stubber81.when(newproductpresenter36);
+        newproductpresenter45.setTaste(appcompatradiobutton4);
+        ApplicationProvider.getApplicationContext();
+        org.robolectric.android.controller.ActivityController activitycontroller23 = org.robolectric.Robolectric.buildActivity(com.hermanowicz.pantry.activity.NewProductActivity.class, intent5);
+        com.hermanowicz.pantry.activity.NewProductActivity newproductactivity11 = (com.hermanowicz.pantry.activity.NewProductActivity) activitycontroller23.get();
+        org.robolectric.android.controller.ActivityController activitycontroller24 = activitycontroller23.create();
+        org.robolectric.android.controller.ActivityController activitycontroller25 = activitycontroller24.resume();
+        activitycontroller25.visible();
+        androidx.appcompat.widget.AppCompatRadioButton appcompatradiobutton5 = (androidx.appcompat.widget.AppCompatRadioButton) newproductactivity11.findViewById(2131362306);
+        newproductpresenter45.setTaste(appcompatradiobutton5);
+    }
+}

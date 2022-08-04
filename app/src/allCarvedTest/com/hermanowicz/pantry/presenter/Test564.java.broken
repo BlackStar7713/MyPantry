@@ -1,0 +1,95 @@
+package com.hermanowicz.pantry.presenter;
+
+import org.junit.Before;
+import androidx.test.core.app.ApplicationProvider;
+import org.robolectric.RobolectricTestRunner;
+import org.junit.runner.RunWith;
+import org.junit.Test;
+
+@RunWith(RobolectricTestRunner.class)
+public class Test564 {
+
+    @Before()
+    public void setup() {
+        org.robolectric.shadows.ShadowSQLiteConnection.reset();
+    }
+
+    /**
+     * Generated from /scratch/berreiter/action-based-test-carving/apps-src/MyPantry/traces/activities.MainActivityTest#shouldGoToAppSettingsActivity/Trace-1659559014062.txt
+     * Method invocation under test: <com.hermanowicz.pantry.presenter.MainPresenter: void navigateToAppSettingsActivity()>_255_508
+     */
+    @Test(timeout = 4000)
+    public void test_com_hermanowicz_pantry_presenter_MainPresenter_navigateToAppSettingsActivity_001() throws Exception {
+        android.content.Context context6 = null;
+        com.hermanowicz.pantry.activity.MainActivity mainactivity6 = null;
+        java.lang.Object object12 = org.mockito.Mockito.mock(java.util.Iterator.class);
+        org.mockito.stubbing.Stubber stubber28 = org.mockito.Mockito.doReturn(false);
+        java.lang.Object object13 = stubber28.when(object12);
+        object13.hasNext();
+        android.content.SharedPreferences sharedpreferences8 = org.mockito.Mockito.mock(android.content.SharedPreferences.class);
+        org.mockito.stubbing.Stubber stubber29 = org.mockito.Mockito.doReturn("0");
+        android.content.SharedPreferences sharedpreferences9 = stubber29.when(sharedpreferences8);
+        sharedpreferences9.getString("SELECTED_APPLICATION_THEME", "0");
+        org.mockito.stubbing.Stubber stubber30 = org.mockito.Mockito.doReturn("local");
+        android.content.SharedPreferences sharedpreferences10 = stubber30.when(sharedpreferences8);
+        sharedpreferences10.getString("DATABASE_MODE", "local");
+        org.mockito.stubbing.Stubber stubber31 = org.mockito.Mockito.doReturn(false);
+        android.content.SharedPreferences sharedpreferences11 = stubber31.when(sharedpreferences8);
+        sharedpreferences11.getBoolean("IS_NOTIFICATIONS_TO_RESTORE", false);
+        java.util.ArrayList arraylist11 = org.mockito.Mockito.mock(java.util.ArrayList.class);
+        org.mockito.stubbing.Stubber stubber32 = org.mockito.Mockito.doNothing();
+        java.util.ArrayList arraylist12 = stubber32.when(arraylist11);
+        arraylist12 = new java.util.ArrayList(0);
+        java.util.ArrayList arraylist13 = org.mockito.Mockito.mock(java.util.ArrayList.class);
+        org.mockito.stubbing.Stubber stubber33 = org.mockito.Mockito.doReturn(object13);
+        java.util.ArrayList arraylist14 = stubber33.when(arraylist13);
+        arraylist14.iterator();
+        com.hermanowicz.pantry.util.PremiumAccess premiumaccess4 = org.mockito.Mockito.mock(com.hermanowicz.pantry.util.PremiumAccess.class);
+        org.mockito.stubbing.Stubber stubber34 = org.mockito.Mockito.doNothing();
+        com.hermanowicz.pantry.util.PremiumAccess premiumaccess5 = stubber34.when(premiumaccess4);
+        premiumaccess5 = new com.hermanowicz.pantry.util.PremiumAccess(context6);
+        org.mockito.stubbing.Stubber stubber35 = org.mockito.Mockito.doNothing();
+        com.hermanowicz.pantry.util.PremiumAccess premiumaccess6 = stubber35.when(premiumaccess4);
+        premiumaccess6 = new java.lang.Object();
+        java.lang.Object object14 = org.mockito.Mockito.mock(retrofit2.DefaultCallAdapterFactory$ExecutorCallbackCall.class);
+        org.mockito.stubbing.Stubber stubber36 = org.mockito.Mockito.doNothing();
+        java.lang.Object object15 = stubber36.when(object14);
+        object15.enqueue(mainactivity6);
+        com.hermanowicz.pantry.presenter.MainPresenter mainpresenter8 = org.mockito.Mockito.mock(com.hermanowicz.pantry.presenter.MainPresenter.class);
+        org.mockito.stubbing.Stubber stubber37 = org.mockito.Mockito.doNothing();
+        com.hermanowicz.pantry.presenter.MainPresenter mainpresenter9 = stubber37.when(mainpresenter8);
+        mainpresenter9 = new com.hermanowicz.pantry.presenter.MainPresenter(mainactivity6, mainactivity6, sharedpreferences11);
+        org.mockito.stubbing.Stubber stubber38 = org.mockito.Mockito.doNothing();
+        com.hermanowicz.pantry.presenter.MainPresenter mainpresenter10 = stubber38.when(mainpresenter8);
+        mainpresenter10 = new java.lang.Object();
+        org.mockito.stubbing.Stubber stubber39 = org.mockito.Mockito.doNothing();
+        com.hermanowicz.pantry.presenter.MainPresenter mainpresenter11 = stubber39.when(mainpresenter8);
+        mainpresenter11.setPremiumAccess(premiumaccess6);
+        org.mockito.stubbing.Stubber stubber40 = org.mockito.Mockito.doNothing();
+        com.hermanowicz.pantry.presenter.MainPresenter mainpresenter12 = stubber40.when(mainpresenter8);
+        mainpresenter12.updateUserData();
+        org.mockito.stubbing.Stubber stubber41 = org.mockito.Mockito.doReturn(true);
+        com.hermanowicz.pantry.presenter.MainPresenter mainpresenter13 = stubber41.when(mainpresenter8);
+        mainpresenter13.isOfflineDb();
+        org.mockito.stubbing.Stubber stubber42 = org.mockito.Mockito.doNothing();
+        com.hermanowicz.pantry.presenter.MainPresenter mainpresenter14 = stubber42.when(mainpresenter8);
+        mainpresenter14.restoreNotifications(context6, arraylist12);
+        org.mockito.stubbing.Stubber stubber43 = org.mockito.Mockito.doNothing();
+        com.hermanowicz.pantry.presenter.MainPresenter mainpresenter15 = stubber43.when(mainpresenter8);
+        mainpresenter15.navigateToAppSettingsActivity();
+        retrofit2.Response response9 = org.mockito.Mockito.mock(retrofit2.Response.class);
+        org.mockito.stubbing.Stubber stubber44 = org.mockito.Mockito.doReturn(true);
+        retrofit2.Response response10 = stubber44.when(response9);
+        response10.isSuccessful();
+        org.mockito.stubbing.Stubber stubber45 = org.mockito.Mockito.doReturn(arraylist14);
+        retrofit2.Response response11 = stubber45.when(response9);
+        response11.body();
+        ApplicationProvider.getApplicationContext();
+        org.robolectric.android.controller.ActivityController activitycontroller12 = org.robolectric.Robolectric.buildActivity(com.hermanowicz.pantry.activity.MainActivity.class);
+        com.hermanowicz.pantry.activity.MainActivity mainactivity7 = (com.hermanowicz.pantry.activity.MainActivity) activitycontroller12.get();
+        org.robolectric.android.controller.ActivityController activitycontroller13 = activitycontroller12.create();
+        activitycontroller13.resume();
+        mainactivity7.onResponse(object15, response11);
+        mainpresenter15.navigateToAppSettingsActivity();
+    }
+}

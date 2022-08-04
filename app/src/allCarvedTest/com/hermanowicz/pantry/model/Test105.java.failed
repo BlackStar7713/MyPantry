@@ -1,0 +1,38 @@
+package com.hermanowicz.pantry.model;
+
+import org.junit.Before;
+import androidx.test.core.app.ApplicationProvider;
+import org.robolectric.RobolectricTestRunner;
+import org.junit.runner.RunWith;
+import org.junit.Test;
+
+@RunWith(RobolectricTestRunner.class)
+public class Test105 {
+
+    @Before()
+    public void setup() {
+        org.robolectric.shadows.ShadowSQLiteConnection.reset();
+    }
+
+    /**
+     * Generated from /scratch/berreiter/action-based-test-carving/apps-src/MyPantry/traces/activities.MyPantryActivityTest#onClickOnEditProductInProductDetailsShouldNavigateToEditProductActivity/Trace-1659559113343.txt
+     * Method invocation under test: <com.hermanowicz.pantry.model.MyPantryModel: java.util.List getAllProductsList()>_2445_4887
+     */
+    @Test(timeout = 4000)
+    public void test_com_hermanowicz_pantry_model_MyPantryModel_getAllProductsList_001() throws Exception {
+        java.util.ArrayList arraylist77 = null;
+        com.hermanowicz.pantry.model.MyPantryModel mypantrymodel5 = null;
+        android.content.Context context31 = ApplicationProvider.getApplicationContext();
+        mypantrymodel5 = new com.hermanowicz.pantry.model.MyPantryModel(context31);
+        mypantrymodel5.setOfflineDbProductsList();
+        mypantrymodel5.setProductsLiveData();
+        mypantrymodel5.getProductLiveData();
+        mypantrymodel5.getGroupProductsList();
+        mypantrymodel5.setProductList(arraylist77);
+        mypantrymodel5.setProductsLiveData();
+        arraylist77.size();
+        mypantrymodel5.getIsMultiSelect();
+        mypantrymodel5.getGroupProductsList();
+        mypantrymodel5.getAllProductsList();
+    }
+}

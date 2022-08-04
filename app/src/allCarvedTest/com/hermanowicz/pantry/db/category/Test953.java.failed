@@ -1,0 +1,28 @@
+package com.hermanowicz.pantry.db.category;
+
+import org.junit.Before;
+import androidx.test.core.app.ApplicationProvider;
+import org.robolectric.RobolectricTestRunner;
+import org.junit.runner.RunWith;
+import org.junit.Test;
+
+@RunWith(RobolectricTestRunner.class)
+public class Test953 {
+
+    @Before()
+    public void setup() {
+        org.robolectric.shadows.ShadowSQLiteConnection.reset();
+    }
+
+    /**
+     * Generated from /scratch/berreiter/action-based-test-carving/apps-src/MyPantry/traces/activities.MainActivityTest#shouldGoToNewProductActivity/Trace-1659559050829.txt
+     * Method invocation under test: <com.hermanowicz.pantry.db.category.CategoryDb_Impl: androidx.sqlite.db.SupportSQLiteOpenHelper createOpenHelper(androidx.room.DatabaseConfiguration)>_414_822
+     */
+    @Test(timeout = 4000)
+    public void test_com_hermanowicz_pantry_db_category_CategoryDb_Impl_createOpenHelper_001() throws Exception {
+        com.hermanowicz.pantry.db.category.CategoryDb_Impl categorydb_impl1 = null;
+        androidx.room.DatabaseConfiguration databaseconfiguration13 = org.mockito.Mockito.mock(androidx.room.DatabaseConfiguration.class);
+        categorydb_impl1 = new com.hermanowicz.pantry.db.category.CategoryDb_Impl();
+        categorydb_impl1.createOpenHelper(databaseconfiguration13);
+    }
+}

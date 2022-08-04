@@ -1,0 +1,29 @@
+package com.hermanowicz.pantry.model;
+
+import org.junit.Before;
+import androidx.test.core.app.ApplicationProvider;
+import org.robolectric.RobolectricTestRunner;
+import org.junit.runner.RunWith;
+import org.junit.Test;
+
+@RunWith(RobolectricTestRunner.class)
+public class Test552 {
+
+    @Before()
+    public void setup() {
+        org.robolectric.shadows.ShadowSQLiteConnection.reset();
+    }
+
+    /**
+     * Generated from /scratch/berreiter/action-based-test-carving/apps-src/MyPantry/traces/activities.MainActivityTest#shouldGoToAppSettingsActivity/Trace-1659559014062.txt
+     * Method invocation under test: <com.hermanowicz.pantry.model.AppSettingsModel: int getSelectedAppTheme()>_14_26
+     */
+    @Test(timeout = 4000)
+    public void test_com_hermanowicz_pantry_model_AppSettingsModel_getSelectedAppTheme_001() throws Exception {
+        com.hermanowicz.pantry.model.AppSettingsModel appsettingsmodel1 = null;
+        android.content.Context context3 = ApplicationProvider.getApplicationContext();
+        android.content.SharedPreferences sharedpreferences3 = android.preference.PreferenceManager.getDefaultSharedPreferences(context3);
+        appsettingsmodel1 = new com.hermanowicz.pantry.model.AppSettingsModel(sharedpreferences3);
+        appsettingsmodel1.getSelectedAppTheme();
+    }
+}

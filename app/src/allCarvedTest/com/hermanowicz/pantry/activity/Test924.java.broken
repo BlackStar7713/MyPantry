@@ -1,0 +1,44 @@
+package com.hermanowicz.pantry.activity;
+
+import org.junit.Before;
+import androidx.test.core.app.ApplicationProvider;
+import org.robolectric.RobolectricTestRunner;
+import org.junit.runner.RunWith;
+import org.junit.Test;
+
+@RunWith(RobolectricTestRunner.class)
+public class Test924 {
+
+    @Before()
+    public void setup() {
+        org.robolectric.shadows.ShadowSQLiteConnection.reset();
+    }
+
+    /**
+     * Generated from /scratch/berreiter/action-based-test-carving/apps-src/MyPantry/traces/activities.NewProductActivityTest#addingTheProductShouldNavigateToPrintQRDetailsActivity/Trace-1659559163567.txt
+     * Method invocation under test: <com.hermanowicz.pantry.activity.NewProductActivity: void onPause()>_1818_3636
+     */
+    @Test(timeout = 4000)
+    public void test_com_hermanowicz_pantry_activity_NewProductActivity_onPause_001() throws Exception {
+        com.hermanowicz.pantry.activity.NewProductActivity newproductactivity31 = null;
+        android.content.Intent intent20 = null;
+        java.lang.Object object30 = org.mockito.Mockito.mock(com.hermanowicz.pantry.activity.NewProductActivity$$ExternalSyntheticLambda3.class);
+        org.mockito.stubbing.Stubber stubber1139 = org.mockito.Mockito.doNothing();
+        java.lang.Object object31 = stubber1139.when(object30);
+        object31 = new com.hermanowicz.pantry.activity.NewProductActivity$$ExternalSyntheticLambda3(newproductactivity31);
+        org.mockito.stubbing.Stubber stubber1140 = org.mockito.Mockito.doNothing();
+        java.lang.Object object32 = stubber1140.when(object30);
+        object32 = new java.lang.Object();
+        androidx.appcompat.widget.AppCompatButton appcompatbutton2 = org.mockito.Mockito.mock(androidx.appcompat.widget.AppCompatButton.class);
+        org.mockito.stubbing.Stubber stubber1141 = org.mockito.Mockito.doNothing();
+        androidx.appcompat.widget.AppCompatButton appcompatbutton3 = stubber1141.when(appcompatbutton2);
+        appcompatbutton3.setOnClickListener(object32);
+        org.robolectric.android.controller.ActivityController activitycontroller62 = org.robolectric.Robolectric.buildActivity(com.hermanowicz.pantry.activity.NewProductActivity.class, intent20);
+        com.hermanowicz.pantry.activity.NewProductActivity newproductactivity32 = (com.hermanowicz.pantry.activity.NewProductActivity) activitycontroller62.get();
+        org.robolectric.android.controller.ActivityController activitycontroller63 = activitycontroller62.create();
+        org.robolectric.android.controller.ActivityController activitycontroller64 = activitycontroller63.resume();
+        org.robolectric.android.controller.ActivityController activitycontroller65 = activitycontroller64.visible();
+        newproductactivity32.lambda$setListeners$0$com-hermanowicz-pantry-activity-NewProductActivity(appcompatbutton3);
+        activitycontroller65.pause();
+    }
+}

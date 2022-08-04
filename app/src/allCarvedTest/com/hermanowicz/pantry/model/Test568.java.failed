@@ -1,0 +1,51 @@
+package com.hermanowicz.pantry.model;
+
+import org.junit.Before;
+import androidx.test.core.app.ApplicationProvider;
+import org.robolectric.RobolectricTestRunner;
+import org.junit.runner.RunWith;
+import org.junit.Test;
+
+@RunWith(RobolectricTestRunner.class)
+public class Test568 {
+
+    @Before()
+    public void setup() {
+        org.robolectric.shadows.ShadowSQLiteConnection.reset();
+    }
+
+    /**
+     * Generated from /scratch/berreiter/action-based-test-carving/apps-src/MyPantry/traces/activities.MainActivityTest#shouldGoToAppSettingsActivity/Trace-1659559014062.txt
+     * Method invocation under test: <com.hermanowicz.pantry.model.AppSettingsModel: int getSelectedScanCamera()>_411_819
+     */
+    @Test(timeout = 4000)
+    public void test_com_hermanowicz_pantry_model_AppSettingsModel_getSelectedScanCamera_001() throws Exception {
+        com.hermanowicz.pantry.model.AppSettingsModel appsettingsmodel2 = null;
+        android.content.SharedPreferences sharedpreferences19 = org.mockito.Mockito.mock(android.content.SharedPreferences.class);
+        org.mockito.stubbing.Stubber stubber78 = org.mockito.Mockito.doReturn("0");
+        android.content.SharedPreferences sharedpreferences20 = stubber78.when(sharedpreferences19);
+        sharedpreferences20.getString("SELECTED_APPLICATION_THEME", "0");
+        org.mockito.stubbing.Stubber stubber79 = org.mockito.Mockito.doReturn("local");
+        android.content.SharedPreferences sharedpreferences21 = stubber79.when(sharedpreferences19);
+        sharedpreferences21.getString("DATABASE_MODE", "local");
+        org.mockito.stubbing.Stubber stubber80 = org.mockito.Mockito.doReturn(false);
+        android.content.SharedPreferences sharedpreferences22 = stubber80.when(sharedpreferences19);
+        sharedpreferences22.getBoolean("IS_NOTIFICATIONS_TO_RESTORE", false);
+        org.mockito.stubbing.Stubber stubber81 = org.mockito.Mockito.doReturn("0");
+        android.content.SharedPreferences sharedpreferences23 = stubber81.when(sharedpreferences19);
+        sharedpreferences23.getString("SELECTED_APPLICATION_THEME", "0");
+        org.mockito.stubbing.Stubber stubber82 = org.mockito.Mockito.doReturn("0");
+        android.content.SharedPreferences sharedpreferences24 = stubber82.when(sharedpreferences19);
+        sharedpreferences24.getString("SELECTED_APPLICATION_THEME", "0");
+        org.mockito.stubbing.Stubber stubber83 = org.mockito.Mockito.doReturn("0");
+        android.content.SharedPreferences sharedpreferences25 = stubber83.when(sharedpreferences19);
+        sharedpreferences25.getString("SCAN_CAMERA", "0");
+        sharedpreferences25.getString("SELECTED_APPLICATION_THEME", "0");
+        sharedpreferences25.getString("DATABASE_MODE", "local");
+        sharedpreferences25.getBoolean("IS_NOTIFICATIONS_TO_RESTORE", false);
+        sharedpreferences25.getString("SELECTED_APPLICATION_THEME", "0");
+        appsettingsmodel2 = new com.hermanowicz.pantry.model.AppSettingsModel(sharedpreferences25);
+        appsettingsmodel2.getSelectedAppTheme();
+        appsettingsmodel2.getSelectedScanCamera();
+    }
+}

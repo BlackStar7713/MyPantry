@@ -1,0 +1,27 @@
+package com.hermanowicz.pantry.activity;
+
+import org.junit.Before;
+import androidx.test.core.app.ApplicationProvider;
+import org.robolectric.RobolectricTestRunner;
+import org.junit.runner.RunWith;
+import org.junit.Test;
+
+@RunWith(RobolectricTestRunner.class)
+public class Test285 {
+
+    @Before()
+    public void setup() {
+        org.robolectric.shadows.ShadowSQLiteConnection.reset();
+    }
+
+    /**
+     * Generated from /scratch/berreiter/action-based-test-carving/apps-src/MyPantry/traces/activities.MainActivityTest#shouldGoToOwnCategoriesActivity/Trace-1659558961978.txt
+     * Method invocation under test: <com.hermanowicz.pantry.activity.CategoriesActivity: void onCreate(android.os.Bundle)>_271_542
+     */
+    @Test(timeout = 4000)
+    public void test_com_hermanowicz_pantry_activity_CategoriesActivity_onCreate_001() throws Exception {
+        org.robolectric.android.controller.ActivityController activitycontroller25 = org.robolectric.Robolectric.buildActivity(com.hermanowicz.pantry.activity.CategoriesActivity.class);
+        activitycontroller25.get();
+        activitycontroller25.create();
+    }
+}

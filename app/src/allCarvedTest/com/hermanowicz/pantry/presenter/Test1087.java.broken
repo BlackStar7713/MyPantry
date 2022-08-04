@@ -1,0 +1,159 @@
+package com.hermanowicz.pantry.presenter;
+
+import org.junit.Before;
+import androidx.test.core.app.ApplicationProvider;
+import org.robolectric.RobolectricTestRunner;
+import org.junit.runner.RunWith;
+import org.junit.Test;
+
+@RunWith(RobolectricTestRunner.class)
+public class Test1087 {
+
+    @Before()
+    public void setup() {
+        org.robolectric.shadows.ShadowSQLiteConnection.reset();
+    }
+
+    /**
+     * Generated from /scratch/berreiter/action-based-test-carving/apps-src/MyPantry/traces/activities.NewProductActivityTest#onPressedBackNavigateToMainActivity/Trace-1659559170023.txt
+     * Method invocation under test: <com.hermanowicz.pantry.presenter.MainPresenter: long getPressedBackTime()>_611_1221
+     */
+    @Test(timeout = 4000)
+    public void test_com_hermanowicz_pantry_presenter_MainPresenter_getPressedBackTime_001() throws Exception {
+        android.content.Context context14 = null;
+        androidx.constraintlayout.widget.ConstraintLayout constraintlayout15 = null;
+        com.hermanowicz.pantry.activity.MainActivity mainactivity8 = null;
+        android.view.ViewGroup viewgroup3 = null;
+        java.lang.Object object20 = org.mockito.Mockito.mock(java.util.Iterator.class);
+        org.mockito.stubbing.Stubber stubber93 = org.mockito.Mockito.doReturn(false);
+        java.lang.Object object21 = stubber93.when(object20);
+        object21.hasNext();
+        com.hermanowicz.pantry.util.PremiumAccess premiumaccess16 = org.mockito.Mockito.mock(com.hermanowicz.pantry.util.PremiumAccess.class);
+        org.mockito.stubbing.Stubber stubber94 = org.mockito.Mockito.doNothing();
+        com.hermanowicz.pantry.util.PremiumAccess premiumaccess17 = stubber94.when(premiumaccess16);
+        premiumaccess17 = new com.hermanowicz.pantry.util.PremiumAccess(context14);
+        org.mockito.stubbing.Stubber stubber95 = org.mockito.Mockito.doNothing();
+        com.hermanowicz.pantry.util.PremiumAccess premiumaccess18 = stubber95.when(premiumaccess16);
+        premiumaccess18 = new java.lang.Object();
+        java.util.ArrayList arraylist17 = org.mockito.Mockito.mock(java.util.ArrayList.class);
+        org.mockito.stubbing.Stubber stubber96 = org.mockito.Mockito.doNothing();
+        java.util.ArrayList arraylist18 = stubber96.when(arraylist17);
+        arraylist18 = new java.util.ArrayList(0);
+        java.util.ArrayList arraylist19 = org.mockito.Mockito.mock(java.util.ArrayList.class);
+        org.mockito.stubbing.Stubber stubber97 = org.mockito.Mockito.doReturn(object21);
+        java.util.ArrayList arraylist20 = stubber97.when(arraylist19);
+        arraylist20.iterator();
+        retrofit2.Response response15 = org.mockito.Mockito.mock(retrofit2.Response.class);
+        org.mockito.stubbing.Stubber stubber98 = org.mockito.Mockito.doReturn(true);
+        retrofit2.Response response16 = stubber98.when(response15);
+        response16.isSuccessful();
+        org.mockito.stubbing.Stubber stubber99 = org.mockito.Mockito.doReturn(arraylist20);
+        retrofit2.Response response17 = stubber99.when(response15);
+        response17.body();
+        com.android.internal.policy.PhoneLayoutInflater phonelayoutinflater14 = org.mockito.Mockito.mock(com.android.internal.policy.PhoneLayoutInflater.class);
+        org.mockito.stubbing.Stubber stubber100 = org.mockito.Mockito.doReturn(constraintlayout15);
+        com.android.internal.policy.PhoneLayoutInflater phonelayoutinflater15 = stubber100.when(phonelayoutinflater14);
+        phonelayoutinflater15.inflate(2131558435, viewgroup3, false);
+        android.content.SharedPreferences sharedpreferences10 = org.mockito.Mockito.mock(android.content.SharedPreferences.class);
+        org.mockito.stubbing.Stubber stubber101 = org.mockito.Mockito.doReturn("0");
+        android.content.SharedPreferences sharedpreferences11 = stubber101.when(sharedpreferences10);
+        sharedpreferences11.getString("SELECTED_APPLICATION_THEME", "0");
+        org.mockito.stubbing.Stubber stubber102 = org.mockito.Mockito.doReturn("local");
+        android.content.SharedPreferences sharedpreferences12 = stubber102.when(sharedpreferences10);
+        sharedpreferences12.getString("DATABASE_MODE", "local");
+        org.mockito.stubbing.Stubber stubber103 = org.mockito.Mockito.doReturn("0");
+        android.content.SharedPreferences sharedpreferences13 = stubber103.when(sharedpreferences10);
+        sharedpreferences13.getString("SELECTED_APPLICATION_THEME", "0");
+        org.mockito.stubbing.Stubber stubber104 = org.mockito.Mockito.doReturn("local");
+        android.content.SharedPreferences sharedpreferences14 = stubber104.when(sharedpreferences10);
+        sharedpreferences14.getString("DATABASE_MODE", "local");
+        org.mockito.stubbing.Stubber stubber105 = org.mockito.Mockito.doReturn(false);
+        android.content.SharedPreferences sharedpreferences15 = stubber105.when(sharedpreferences10);
+        sharedpreferences15.getBoolean("IS_NOTIFICATIONS_TO_RESTORE", false);
+        java.lang.Object object22 = org.mockito.Mockito.mock(retrofit2.DefaultCallAdapterFactory$ExecutorCallbackCall.class);
+        org.mockito.stubbing.Stubber stubber106 = org.mockito.Mockito.doNothing();
+        java.lang.Object object23 = stubber106.when(object22);
+        object23.enqueue(mainactivity8);
+        com.hermanowicz.pantry.presenter.MainPresenter mainpresenter8 = org.mockito.Mockito.mock(com.hermanowicz.pantry.presenter.MainPresenter.class);
+        org.mockito.stubbing.Stubber stubber107 = org.mockito.Mockito.doNothing();
+        com.hermanowicz.pantry.presenter.MainPresenter mainpresenter9 = stubber107.when(mainpresenter8);
+        mainpresenter9 = new com.hermanowicz.pantry.presenter.MainPresenter(mainactivity8, mainactivity8, sharedpreferences15);
+        org.mockito.stubbing.Stubber stubber108 = org.mockito.Mockito.doNothing();
+        com.hermanowicz.pantry.presenter.MainPresenter mainpresenter10 = stubber108.when(mainpresenter8);
+        mainpresenter10 = new java.lang.Object();
+        org.mockito.stubbing.Stubber stubber109 = org.mockito.Mockito.doNothing();
+        com.hermanowicz.pantry.presenter.MainPresenter mainpresenter11 = stubber109.when(mainpresenter8);
+        mainpresenter11.setPremiumAccess(premiumaccess18);
+        org.mockito.stubbing.Stubber stubber110 = org.mockito.Mockito.doNothing();
+        com.hermanowicz.pantry.presenter.MainPresenter mainpresenter12 = stubber110.when(mainpresenter8);
+        mainpresenter12.updateUserData();
+        org.mockito.stubbing.Stubber stubber111 = org.mockito.Mockito.doReturn(true);
+        com.hermanowicz.pantry.presenter.MainPresenter mainpresenter13 = stubber111.when(mainpresenter8);
+        mainpresenter13.isOfflineDb();
+        org.mockito.stubbing.Stubber stubber112 = org.mockito.Mockito.doNothing();
+        com.hermanowicz.pantry.presenter.MainPresenter mainpresenter14 = stubber112.when(mainpresenter8);
+        mainpresenter14.restoreNotifications(context14, arraylist18);
+        org.mockito.stubbing.Stubber stubber113 = org.mockito.Mockito.doReturn(0L);
+        com.hermanowicz.pantry.presenter.MainPresenter mainpresenter15 = stubber113.when(mainpresenter8);
+        mainpresenter15.getPressedBackTime();
+        ApplicationProvider.getApplicationContext();
+        sharedpreferences15.getString("SELECTED_APPLICATION_THEME", "0");
+        androidx.constraintlayout.widget.ConstraintLayout constraintlayout18 = (androidx.constraintlayout.widget.ConstraintLayout) phonelayoutinflater15.inflate(2131558435, viewgroup3, false);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout18, 2131361926);
+        androidx.constraintlayout.widget.ConstraintLayout constraintlayout19 = (androidx.constraintlayout.widget.ConstraintLayout) androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout18, 2131362297);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout19, 2131361968);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout19, 2131361969);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout19, 2131361970);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout19, 2131361971);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout19, 2131362048);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout19, 2131362050);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout19, 2131362051);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout19, 2131362054);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout19, 2131362055);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout19, 2131362057);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout19, 2131362060);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout19, 2131362061);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout19, 2131362064);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout19, 2131362154);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout19, 2131362156);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout19, 2131362157);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout19, 2131362158);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout19, 2131362159);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout19, 2131362161);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout19, 2131362162);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout19, 2131362163);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout19, 2131362298);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout19, 2131362302);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout19, 2131362303);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout19, 2131362304);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout19, 2131362305);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout19, 2131362306);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout19, 2131362307);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout19, 2131362308);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout19, 2131362375);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout19, 2131362376);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout19, 2131362377);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout19, 2131362433);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout19, 2131362435);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout19, 2131362437);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout19, 2131362441);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout19, 2131362447);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout19, 2131362448);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout19, 2131362470);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout19, 2131362474);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout19, 2131362482);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout19, 2131362483);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout19, 2131362487);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout19, 2131362488);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout19, 2131362489);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout18, 2131362336);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout18, 2131362502);
+        sharedpreferences15.getString("DATABASE_MODE", "local");
+        org.robolectric.android.controller.ActivityController activitycontroller59 = org.robolectric.Robolectric.buildActivity(com.hermanowicz.pantry.activity.MainActivity.class);
+        com.hermanowicz.pantry.activity.MainActivity mainactivity9 = (com.hermanowicz.pantry.activity.MainActivity) activitycontroller59.get();
+        org.robolectric.android.controller.ActivityController activitycontroller60 = activitycontroller59.create();
+        activitycontroller60.resume();
+        mainactivity9.onResponse(object23, response17);
+        mainpresenter15.getPressedBackTime();
+    }
+}

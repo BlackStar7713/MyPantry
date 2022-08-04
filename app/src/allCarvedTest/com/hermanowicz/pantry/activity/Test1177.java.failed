@@ -1,0 +1,31 @@
+package com.hermanowicz.pantry.activity;
+
+import org.junit.Before;
+import androidx.test.core.app.ApplicationProvider;
+import org.robolectric.RobolectricTestRunner;
+import org.junit.runner.RunWith;
+import org.junit.Test;
+
+@RunWith(RobolectricTestRunner.class)
+public class Test1177 {
+
+    @Before()
+    public void setup() {
+        org.robolectric.shadows.ShadowSQLiteConnection.reset();
+    }
+
+    /**
+     * Generated from /scratch/berreiter/action-based-test-carving/apps-src/MyPantry/traces/activities.MyPantryActivityTest#onClickOnItemInRecyclerViewNavigateToProductDetailsActivity/Trace-1659559083578.txt
+     * Method invocation under test: <com.hermanowicz.pantry.activity.ProductDetailsActivity: void onCreate(android.os.Bundle)>_3266_6532
+     */
+    @Test(timeout = 4000)
+    public void test_com_hermanowicz_pantry_activity_ProductDetailsActivity_onCreate_001() throws Exception {
+        android.content.Intent intent0 = null;
+        intent0 = new android.content.Intent();
+        android.content.Intent intent1 = intent0.putExtra("product_id", 3);
+        android.content.Intent intent2 = intent1.putExtra("hash_code", "235983629");
+        org.robolectric.android.controller.ActivityController activitycontroller11 = org.robolectric.Robolectric.buildActivity(com.hermanowicz.pantry.activity.ProductDetailsActivity.class, intent2);
+        activitycontroller11.get();
+        activitycontroller11.create();
+    }
+}

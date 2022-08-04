@@ -1,0 +1,64 @@
+package com.hermanowicz.pantry.activity;
+
+import org.junit.Before;
+import androidx.test.core.app.ApplicationProvider;
+import org.robolectric.RobolectricTestRunner;
+import org.junit.runner.RunWith;
+import org.junit.Test;
+
+@RunWith(RobolectricTestRunner.class)
+public class Test574 {
+
+    @Before()
+    public void setup() {
+        org.robolectric.shadows.ShadowSQLiteConnection.reset();
+    }
+
+    /**
+     * Generated from /scratch/berreiter/action-based-test-carving/apps-src/MyPantry/traces/activities.MainActivityTest#shouldGoToAppSettingsActivity/Trace-1659559014062.txt
+     * Method invocation under test: <com.hermanowicz.pantry.activity.MainActivity: void onDestroy()>_487_974
+     */
+    @Test(timeout = 4000)
+    public void test_com_hermanowicz_pantry_activity_MainActivity_onDestroy_001() throws Exception {
+        com.hermanowicz.pantry.activity.MainActivity mainactivity14 = null;
+        java.lang.Object object77 = org.mockito.Mockito.mock(java.util.Iterator.class);
+        org.mockito.stubbing.Stubber stubber194 = org.mockito.Mockito.doReturn(false);
+        java.lang.Object object78 = stubber194.when(object77);
+        object78.hasNext();
+        java.util.ArrayList arraylist33 = org.mockito.Mockito.mock(java.util.ArrayList.class);
+        org.mockito.stubbing.Stubber stubber195 = org.mockito.Mockito.doReturn(object78);
+        java.util.ArrayList arraylist34 = stubber195.when(arraylist33);
+        arraylist34.iterator();
+        java.lang.Object object79 = org.mockito.Mockito.mock(com.hermanowicz.pantry.activity.MainActivity$$ExternalSyntheticLambda5.class);
+        org.mockito.stubbing.Stubber stubber196 = org.mockito.Mockito.doNothing();
+        java.lang.Object object80 = stubber196.when(object79);
+        object80 = new com.hermanowicz.pantry.activity.MainActivity$$ExternalSyntheticLambda5(mainactivity14);
+        org.mockito.stubbing.Stubber stubber197 = org.mockito.Mockito.doNothing();
+        java.lang.Object object81 = stubber197.when(object79);
+        object81 = new java.lang.Object();
+        androidx.cardview.widget.CardView cardview10 = org.mockito.Mockito.mock(androidx.cardview.widget.CardView.class);
+        org.mockito.stubbing.Stubber stubber198 = org.mockito.Mockito.doNothing();
+        androidx.cardview.widget.CardView cardview11 = stubber198.when(cardview10);
+        cardview11.setOnClickListener(object81);
+        java.lang.Object object82 = org.mockito.Mockito.mock(retrofit2.DefaultCallAdapterFactory$ExecutorCallbackCall.class);
+        org.mockito.stubbing.Stubber stubber199 = org.mockito.Mockito.doNothing();
+        java.lang.Object object83 = stubber199.when(object82);
+        object83.enqueue(mainactivity14);
+        retrofit2.Response response33 = org.mockito.Mockito.mock(retrofit2.Response.class);
+        org.mockito.stubbing.Stubber stubber200 = org.mockito.Mockito.doReturn(true);
+        retrofit2.Response response34 = stubber200.when(response33);
+        response34.isSuccessful();
+        org.mockito.stubbing.Stubber stubber201 = org.mockito.Mockito.doReturn(arraylist34);
+        retrofit2.Response response35 = stubber201.when(response33);
+        response35.body();
+        org.robolectric.android.controller.ActivityController activitycontroller33 = org.robolectric.Robolectric.buildActivity(com.hermanowicz.pantry.activity.MainActivity.class);
+        com.hermanowicz.pantry.activity.MainActivity mainactivity15 = (com.hermanowicz.pantry.activity.MainActivity) activitycontroller33.get();
+        org.robolectric.android.controller.ActivityController activitycontroller34 = activitycontroller33.create();
+        org.robolectric.android.controller.ActivityController activitycontroller35 = activitycontroller34.resume();
+        mainactivity15.onResponse(object83, response35);
+        mainactivity15.lambda$setListeners$6$com-hermanowicz-pantry-activity-MainActivity(cardview11);
+        org.robolectric.android.controller.ActivityController activitycontroller36 = activitycontroller35.pause();
+        mainactivity15.finish();
+        activitycontroller36.destroy();
+    }
+}

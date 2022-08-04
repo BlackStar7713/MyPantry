@@ -1,0 +1,33 @@
+package com.hermanowicz.pantry.activity;
+
+import org.junit.Before;
+import androidx.test.core.app.ApplicationProvider;
+import org.robolectric.RobolectricTestRunner;
+import org.junit.runner.RunWith;
+import org.junit.Test;
+
+@RunWith(RobolectricTestRunner.class)
+public class Test919 {
+
+    @Before()
+    public void setup() {
+        org.robolectric.shadows.ShadowSQLiteConnection.reset();
+    }
+
+    /**
+     * Generated from /scratch/berreiter/action-based-test-carving/apps-src/MyPantry/traces/activities.NewProductActivityTest#addingTheProductShouldNavigateToPrintQRDetailsActivity/Trace-1659559163567.txt
+     * Method invocation under test: <com.hermanowicz.pantry.activity.NewProductActivity: void reCreateNotifications()>_1578_3151
+     */
+    @Test(timeout = 4000)
+    public void test_com_hermanowicz_pantry_activity_NewProductActivity_reCreateNotifications_001() throws Exception {
+        android.content.Intent intent16 = null;
+        intent16 = new android.content.Intent();
+        org.robolectric.android.controller.ActivityController activitycontroller46 = org.robolectric.Robolectric.buildActivity(com.hermanowicz.pantry.activity.NewProductActivity.class, intent16);
+        com.hermanowicz.pantry.activity.NewProductActivity newproductactivity25 = (com.hermanowicz.pantry.activity.NewProductActivity) activitycontroller46.get();
+        org.robolectric.android.controller.ActivityController activitycontroller47 = activitycontroller46.create();
+        org.robolectric.android.controller.ActivityController activitycontroller48 = activitycontroller47.resume();
+        activitycontroller48.visible();
+        newproductactivity25.findViewById(2131362306);
+        newproductactivity25.reCreateNotifications();
+    }
+}

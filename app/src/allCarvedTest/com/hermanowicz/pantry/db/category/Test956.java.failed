@@ -1,0 +1,32 @@
+package com.hermanowicz.pantry.db.category;
+
+import org.junit.Before;
+import androidx.test.core.app.ApplicationProvider;
+import org.robolectric.RobolectricTestRunner;
+import org.junit.runner.RunWith;
+import org.junit.Test;
+
+@RunWith(RobolectricTestRunner.class)
+public class Test956 {
+
+    @Before()
+    public void setup() {
+        org.robolectric.shadows.ShadowSQLiteConnection.reset();
+    }
+
+    /**
+     * Generated from /scratch/berreiter/action-based-test-carving/apps-src/MyPantry/traces/activities.MainActivityTest#shouldGoToNewProductActivity/Trace-1659559050829.txt
+     * Method invocation under test: <com.hermanowicz.pantry.db.category.CategoryDb_Impl: java.util.Map getRequiredTypeConverters()>_428_850
+     */
+    @Test(timeout = 4000)
+    public void test_com_hermanowicz_pantry_db_category_CategoryDb_Impl_getRequiredTypeConverters_001() throws Exception {
+        com.hermanowicz.pantry.db.category.CategoryDb_Impl categorydb_impl4 = null;
+        androidx.room.DatabaseConfiguration databaseconfiguration19 = org.mockito.Mockito.mock(androidx.room.DatabaseConfiguration.class);
+        java.util.HashMap hashmap18 = org.mockito.Mockito.mock(java.util.HashMap.class);
+        categorydb_impl4 = new com.hermanowicz.pantry.db.category.CategoryDb_Impl();
+        categorydb_impl4.createOpenHelper(databaseconfiguration19);
+        categorydb_impl4.getRequiredAutoMigrationSpecs();
+        categorydb_impl4.getAutoMigrations(hashmap18);
+        categorydb_impl4.getRequiredTypeConverters();
+    }
+}

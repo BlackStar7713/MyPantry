@@ -1,0 +1,47 @@
+package com.hermanowicz.pantry.util;
+
+import org.junit.Before;
+import androidx.test.core.app.ApplicationProvider;
+import org.robolectric.RobolectricTestRunner;
+import org.junit.runner.RunWith;
+import org.junit.Test;
+
+@RunWith(RobolectricTestRunner.class)
+public class Test369 {
+
+    @Before()
+    public void setup() {
+        org.robolectric.shadows.ShadowSQLiteConnection.reset();
+    }
+
+    /**
+     * Generated from /scratch/berreiter/action-based-test-carving/apps-src/MyPantry/traces/activities.MainActivityTest#shouldGoToMyPantryActivity/Trace-1659559035171.txt
+     * Method invocation under test: <com.hermanowicz.pantry.util.ProductsAdapter: void <init>(android.content.SharedPreferences)>_419_836
+     */
+    @Test(timeout = 4000)
+    public void test_com_hermanowicz_pantry_util_ProductsAdapter_constructor_001() throws Exception {
+        com.hermanowicz.pantry.util.ProductsAdapter productsadapter0 = null;
+        android.content.SharedPreferences sharedpreferences18 = org.mockito.Mockito.mock(android.content.SharedPreferences.class);
+        org.mockito.stubbing.Stubber stubber77 = org.mockito.Mockito.doReturn("0");
+        android.content.SharedPreferences sharedpreferences19 = stubber77.when(sharedpreferences18);
+        sharedpreferences19.getString("SELECTED_APPLICATION_THEME", "0");
+        org.mockito.stubbing.Stubber stubber78 = org.mockito.Mockito.doReturn("local");
+        android.content.SharedPreferences sharedpreferences20 = stubber78.when(sharedpreferences18);
+        sharedpreferences20.getString("DATABASE_MODE", "local");
+        org.mockito.stubbing.Stubber stubber79 = org.mockito.Mockito.doReturn(false);
+        android.content.SharedPreferences sharedpreferences21 = stubber79.when(sharedpreferences18);
+        sharedpreferences21.getBoolean("IS_NOTIFICATIONS_TO_RESTORE", false);
+        org.mockito.stubbing.Stubber stubber80 = org.mockito.Mockito.doReturn("0");
+        android.content.SharedPreferences sharedpreferences22 = stubber80.when(sharedpreferences18);
+        sharedpreferences22.getString("SELECTED_APPLICATION_THEME", "0");
+        org.mockito.stubbing.Stubber stubber81 = org.mockito.Mockito.doReturn("local");
+        android.content.SharedPreferences sharedpreferences23 = stubber81.when(sharedpreferences18);
+        sharedpreferences23.getString("DATABASE_MODE", "local");
+        sharedpreferences23.getString("SELECTED_APPLICATION_THEME", "0");
+        sharedpreferences23.getString("DATABASE_MODE", "local");
+        sharedpreferences23.getBoolean("IS_NOTIFICATIONS_TO_RESTORE", false);
+        sharedpreferences23.getString("SELECTED_APPLICATION_THEME", "0");
+        sharedpreferences23.getString("DATABASE_MODE", "local");
+        productsadapter0 = new com.hermanowicz.pantry.util.ProductsAdapter(sharedpreferences23);
+    }
+}

@@ -1,0 +1,38 @@
+package com.hermanowicz.pantry.model;
+
+import org.junit.Before;
+import androidx.test.core.app.ApplicationProvider;
+import org.robolectric.RobolectricTestRunner;
+import org.junit.runner.RunWith;
+import org.junit.Test;
+
+@RunWith(RobolectricTestRunner.class)
+public class Test1196 {
+
+    @Before()
+    public void setup() {
+        org.robolectric.shadows.ShadowSQLiteConnection.reset();
+    }
+
+    /**
+     * Generated from /scratch/berreiter/action-based-test-carving/apps-src/MyPantry/traces/activities.MyPantryActivityTest#onClickOnItemInRecyclerViewNavigateToProductDetailsActivity/Trace-1659559083578.txt
+     * Method invocation under test: <com.hermanowicz.pantry.model.ProductDataModel: boolean isCorrectHashCode(java.lang.String)>_4572_9141
+     */
+    @Test(timeout = 4000)
+    public void test_com_hermanowicz_pantry_model_ProductDataModel_isCorrectHashCode_001() throws Exception {
+        android.content.Intent intent9 = null;
+        com.hermanowicz.pantry.model.ProductDataModel productdatamodel7 = null;
+        intent9 = new android.content.Intent();
+        android.content.Context context47 = ApplicationProvider.getApplicationContext();
+        productdatamodel7 = new com.hermanowicz.pantry.model.ProductDataModel(context47);
+        java.util.ArrayList arraylist107 = intent9.getParcelableArrayListExtra("product_list");
+        java.util.ArrayList arraylist108 = intent9.getParcelableArrayListExtra("all_product_list");
+        productdatamodel7.setAllProductList(arraylist108);
+        productdatamodel7.setProductList(arraylist107);
+        productdatamodel7.setProduct(3);
+        productdatamodel7.setHashCode("235983629");
+        productdatamodel7.getHashCode();
+        productdatamodel7.isProductListEmpty();
+        productdatamodel7.isCorrectHashCode("235983629");
+    }
+}

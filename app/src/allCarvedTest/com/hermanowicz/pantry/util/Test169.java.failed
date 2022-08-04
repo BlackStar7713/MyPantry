@@ -1,0 +1,32 @@
+package com.hermanowicz.pantry.util;
+
+import org.junit.Before;
+import androidx.test.core.app.ApplicationProvider;
+import org.robolectric.RobolectricTestRunner;
+import org.junit.runner.RunWith;
+import org.junit.Test;
+
+@RunWith(RobolectricTestRunner.class)
+public class Test169 {
+
+    @Before()
+    public void setup() {
+        org.robolectric.shadows.ShadowSQLiteConnection.reset();
+    }
+
+    /**
+     * Generated from /scratch/berreiter/action-based-test-carving/apps-src/MyPantry/traces/activities.MainActivityTest#shouldGoToStorageLocationsActivity/Trace-1659558980746.txt
+     * Method invocation under test: <com.hermanowicz.pantry.util.StorageLocationsAdapter: int getItemCount()>_432_864
+     */
+    @Test(timeout = 4000)
+    public void test_com_hermanowicz_pantry_util_StorageLocationsAdapter_getItemCount_001() throws Exception {
+        java.util.ArrayList arraylist31 = null;
+        com.hermanowicz.pantry.util.StorageLocationsAdapter storagelocationsadapter2 = null;
+        storagelocationsadapter2 = new com.hermanowicz.pantry.util.StorageLocationsAdapter();
+        arraylist31 = new java.util.ArrayList(0);
+        storagelocationsadapter2.setData(arraylist31);
+        storagelocationsadapter2.notifyDataSetChanged();
+        arraylist31.size();
+        storagelocationsadapter2.getItemCount();
+    }
+}

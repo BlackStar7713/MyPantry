@@ -1,0 +1,110 @@
+package com.hermanowicz.pantry.activity;
+
+import org.junit.Before;
+import androidx.test.core.app.ApplicationProvider;
+import org.robolectric.RobolectricTestRunner;
+import org.junit.runner.RunWith;
+import org.junit.Test;
+
+@RunWith(RobolectricTestRunner.class)
+public class Test1093 {
+
+    @Before()
+    public void setup() {
+        org.robolectric.shadows.ShadowSQLiteConnection.reset();
+    }
+
+    /**
+     * Generated from /scratch/berreiter/action-based-test-carving/apps-src/MyPantry/traces/activities.NewProductActivityTest#onPressedBackNavigateToMainActivity/Trace-1659559170023.txt
+     * Method invocation under test: <com.hermanowicz.pantry.activity.MainActivity: void onDestroy()>_631_1262
+     */
+    @Test(timeout = 4000)
+    public void test_com_hermanowicz_pantry_activity_MainActivity_onDestroy_001() throws Exception {
+        androidx.constraintlayout.widget.ConstraintLayout constraintlayout35 = null;
+        android.view.ViewGroup viewgroup7 = null;
+        com.hermanowicz.pantry.activity.MainActivity mainactivity16 = null;
+        java.lang.Object object52 = org.mockito.Mockito.mock(java.util.Iterator.class);
+        org.mockito.stubbing.Stubber stubber188 = org.mockito.Mockito.doReturn(false);
+        java.lang.Object object53 = stubber188.when(object52);
+        object53.hasNext();
+        java.util.ArrayList arraylist43 = org.mockito.Mockito.mock(java.util.ArrayList.class);
+        org.mockito.stubbing.Stubber stubber189 = org.mockito.Mockito.doReturn(object53);
+        java.util.ArrayList arraylist44 = stubber189.when(arraylist43);
+        arraylist44.iterator();
+        android.view.KeyEvent keyevent15 = org.mockito.Mockito.mock(android.view.KeyEvent.class);
+        retrofit2.Response response39 = org.mockito.Mockito.mock(retrofit2.Response.class);
+        org.mockito.stubbing.Stubber stubber190 = org.mockito.Mockito.doReturn(true);
+        retrofit2.Response response40 = stubber190.when(response39);
+        response40.isSuccessful();
+        org.mockito.stubbing.Stubber stubber191 = org.mockito.Mockito.doReturn(arraylist44);
+        retrofit2.Response response41 = stubber191.when(response39);
+        response41.body();
+        com.android.internal.policy.PhoneLayoutInflater phonelayoutinflater30 = org.mockito.Mockito.mock(com.android.internal.policy.PhoneLayoutInflater.class);
+        org.mockito.stubbing.Stubber stubber192 = org.mockito.Mockito.doReturn(constraintlayout35);
+        com.android.internal.policy.PhoneLayoutInflater phonelayoutinflater31 = stubber192.when(phonelayoutinflater30);
+        phonelayoutinflater31.inflate(2131558435, viewgroup7, false);
+        java.lang.Object object54 = org.mockito.Mockito.mock(retrofit2.DefaultCallAdapterFactory$ExecutorCallbackCall.class);
+        org.mockito.stubbing.Stubber stubber193 = org.mockito.Mockito.doNothing();
+        java.lang.Object object55 = stubber193.when(object54);
+        object55.enqueue(mainactivity16);
+        androidx.constraintlayout.widget.ConstraintLayout constraintlayout38 = (androidx.constraintlayout.widget.ConstraintLayout) phonelayoutinflater31.inflate(2131558435, viewgroup7, false);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout38, 2131361926);
+        androidx.constraintlayout.widget.ConstraintLayout constraintlayout39 = (androidx.constraintlayout.widget.ConstraintLayout) androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout38, 2131362297);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout39, 2131361968);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout39, 2131361969);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout39, 2131361970);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout39, 2131361971);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout39, 2131362048);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout39, 2131362050);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout39, 2131362051);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout39, 2131362054);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout39, 2131362055);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout39, 2131362057);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout39, 2131362060);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout39, 2131362061);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout39, 2131362064);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout39, 2131362154);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout39, 2131362156);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout39, 2131362157);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout39, 2131362158);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout39, 2131362159);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout39, 2131362161);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout39, 2131362162);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout39, 2131362163);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout39, 2131362298);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout39, 2131362302);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout39, 2131362303);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout39, 2131362304);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout39, 2131362305);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout39, 2131362306);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout39, 2131362307);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout39, 2131362308);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout39, 2131362375);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout39, 2131362376);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout39, 2131362377);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout39, 2131362433);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout39, 2131362435);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout39, 2131362437);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout39, 2131362441);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout39, 2131362447);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout39, 2131362448);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout39, 2131362470);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout39, 2131362474);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout39, 2131362482);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout39, 2131362483);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout39, 2131362487);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout39, 2131362488);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout39, 2131362489);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout38, 2131362336);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout38, 2131362502);
+        org.robolectric.android.controller.ActivityController activitycontroller89 = org.robolectric.Robolectric.buildActivity(com.hermanowicz.pantry.activity.MainActivity.class);
+        com.hermanowicz.pantry.activity.MainActivity mainactivity17 = (com.hermanowicz.pantry.activity.MainActivity) activitycontroller89.get();
+        org.robolectric.android.controller.ActivityController activitycontroller90 = activitycontroller89.create();
+        org.robolectric.android.controller.ActivityController activitycontroller91 = activitycontroller90.resume();
+        mainactivity17.onResponse(object55, response41);
+        mainactivity17.onKeyDown(4, keyevent15);
+        mainactivity17.finish();
+        org.robolectric.android.controller.ActivityController activitycontroller92 = activitycontroller91.pause();
+        activitycontroller92.destroy();
+    }
+}

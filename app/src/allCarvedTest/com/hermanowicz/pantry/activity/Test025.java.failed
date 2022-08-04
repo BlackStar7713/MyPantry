@@ -1,0 +1,31 @@
+package com.hermanowicz.pantry.activity;
+
+import org.junit.Before;
+import androidx.test.core.app.ApplicationProvider;
+import org.robolectric.RobolectricTestRunner;
+import org.junit.runner.RunWith;
+import org.junit.Test;
+
+@RunWith(RobolectricTestRunner.class)
+public class Test025 {
+
+    @Before()
+    public void setup() {
+        org.robolectric.shadows.ShadowSQLiteConnection.reset();
+    }
+
+    /**
+     * Generated from /scratch/berreiter/action-based-test-carving/apps-src/MyPantry/traces/activities.MainActivityTest#shouldGoToScanProductActivity/Trace-1659558937116.txt
+     * Method invocation under test: <com.hermanowicz.pantry.activity.ScanProductActivity: void finish()>_383_766
+     */
+    @Test(timeout = 4000)
+    public void test_com_hermanowicz_pantry_activity_ScanProductActivity_finish_001() throws Exception {
+        android.content.Intent intent1 = null;
+        android.content.Context context11 = ApplicationProvider.getApplicationContext();
+        intent1 = new android.content.Intent(context11, com.hermanowicz.pantry.activity.ScanProductActivity.class);
+        org.robolectric.android.controller.ActivityController activitycontroller39 = org.robolectric.Robolectric.buildActivity(com.hermanowicz.pantry.activity.ScanProductActivity.class, intent1);
+        com.hermanowicz.pantry.activity.ScanProductActivity scanproductactivity3 = (com.hermanowicz.pantry.activity.ScanProductActivity) activitycontroller39.get();
+        activitycontroller39.create();
+        scanproductactivity3.finish();
+    }
+}

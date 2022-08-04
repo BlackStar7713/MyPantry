@@ -1,0 +1,33 @@
+package com.hermanowicz.pantry.model;
+
+import org.junit.Before;
+import androidx.test.core.app.ApplicationProvider;
+import org.robolectric.RobolectricTestRunner;
+import org.junit.runner.RunWith;
+import org.junit.Test;
+
+@RunWith(RobolectricTestRunner.class)
+public class Test1191 {
+
+    @Before()
+    public void setup() {
+        org.robolectric.shadows.ShadowSQLiteConnection.reset();
+    }
+
+    /**
+     * Generated from /scratch/berreiter/action-based-test-carving/apps-src/MyPantry/traces/activities.MyPantryActivityTest#onClickOnItemInRecyclerViewNavigateToProductDetailsActivity/Trace-1659559083578.txt
+     * Method invocation under test: <com.hermanowicz.pantry.model.ProductDataModel: void setProductList(java.util.ArrayList)>_4381_8759
+     */
+    @Test(timeout = 4000)
+    public void test_com_hermanowicz_pantry_model_ProductDataModel_setProductList_001() throws Exception {
+        android.content.Intent intent4 = null;
+        com.hermanowicz.pantry.model.ProductDataModel productdatamodel2 = null;
+        intent4 = new android.content.Intent();
+        android.content.Context context37 = ApplicationProvider.getApplicationContext();
+        productdatamodel2 = new com.hermanowicz.pantry.model.ProductDataModel(context37);
+        java.util.ArrayList arraylist87 = intent4.getParcelableArrayListExtra("product_list");
+        java.util.ArrayList arraylist88 = intent4.getParcelableArrayListExtra("all_product_list");
+        productdatamodel2.setAllProductList(arraylist88);
+        productdatamodel2.setProductList(arraylist87);
+    }
+}

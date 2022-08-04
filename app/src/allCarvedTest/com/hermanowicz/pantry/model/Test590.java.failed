@@ -1,0 +1,28 @@
+package com.hermanowicz.pantry.model;
+
+import org.junit.Before;
+import androidx.test.core.app.ApplicationProvider;
+import org.robolectric.RobolectricTestRunner;
+import org.junit.runner.RunWith;
+import org.junit.Test;
+
+@RunWith(RobolectricTestRunner.class)
+public class Test590 {
+
+    @Before()
+    public void setup() {
+        org.robolectric.shadows.ShadowSQLiteConnection.reset();
+    }
+
+    /**
+     * Generated from /scratch/berreiter/action-based-test-carving/apps-src/MyPantry/traces/activities.MyPantryActivityTest#onSetVolumeFilterShouldShowProductsWithThisVolume/Trace-1659559148638.txt
+     * Method invocation under test: <com.hermanowicz.pantry.model.MyPantryModel: void setOfflineDbProductsList()>_175_347
+     */
+    @Test(timeout = 4000)
+    public void test_com_hermanowicz_pantry_model_MyPantryModel_setOfflineDbProductsList_001() throws Exception {
+        com.hermanowicz.pantry.model.MyPantryModel mypantrymodel1 = null;
+        android.content.Context context9 = ApplicationProvider.getApplicationContext();
+        mypantrymodel1 = new com.hermanowicz.pantry.model.MyPantryModel(context9);
+        mypantrymodel1.setOfflineDbProductsList();
+    }
+}

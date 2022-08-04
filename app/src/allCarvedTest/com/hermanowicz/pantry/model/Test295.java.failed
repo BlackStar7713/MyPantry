@@ -1,0 +1,29 @@
+package com.hermanowicz.pantry.model;
+
+import org.junit.Before;
+import androidx.test.core.app.ApplicationProvider;
+import org.robolectric.RobolectricTestRunner;
+import org.junit.runner.RunWith;
+import org.junit.Test;
+
+@RunWith(RobolectricTestRunner.class)
+public class Test295 {
+
+    @Before()
+    public void setup() {
+        org.robolectric.shadows.ShadowSQLiteConnection.reset();
+    }
+
+    /**
+     * Generated from /scratch/berreiter/action-based-test-carving/apps-src/MyPantry/traces/activities.MainActivityTest#shouldGoToOwnCategoriesActivity/Trace-1659558961978.txt
+     * Method invocation under test: <com.hermanowicz.pantry.model.CategoryModel: java.util.List getCategoryList()>_403_803
+     */
+    @Test(timeout = 4000)
+    public void test_com_hermanowicz_pantry_model_CategoryModel_getCategoryList_001() throws Exception {
+        com.hermanowicz.pantry.model.CategoryModel categorymodel2 = null;
+        android.content.Context context13 = ApplicationProvider.getApplicationContext();
+        categorymodel2 = new com.hermanowicz.pantry.model.CategoryModel(context13);
+        categorymodel2.setOfflineDbCategoryList();
+        categorymodel2.getCategoryList();
+    }
+}

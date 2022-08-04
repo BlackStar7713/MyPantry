@@ -1,0 +1,129 @@
+package com.hermanowicz.pantry.db.product;
+
+import org.junit.Before;
+import androidx.test.core.app.ApplicationProvider;
+import org.robolectric.RobolectricTestRunner;
+import org.junit.runner.RunWith;
+import org.junit.Test;
+
+@RunWith(RobolectricTestRunner.class)
+public class Test923 {
+
+    @Before()
+    public void setup() {
+        org.robolectric.shadows.ShadowSQLiteConnection.reset();
+    }
+
+    /**
+     * Generated from /scratch/berreiter/action-based-test-carving/apps-src/MyPantry/traces/activities.NewProductActivityTest#addingTheProductShouldNavigateToPrintQRDetailsActivity/Trace-1659559163567.txt
+     * Method invocation under test: <com.hermanowicz.pantry.db.product.Product: void writeToParcel(android.os.Parcel,int)>_1597_3187
+     */
+    @Test(timeout = 4000)
+    public void test_com_hermanowicz_pantry_db_product_Product_writeToParcel_001() throws Exception {
+        com.hermanowicz.pantry.db.product.Product product707 = null;
+        android.os.Parcel parcel22 = org.mockito.Mockito.mock(android.os.Parcel.class);
+        org.mockito.stubbing.Stubber stubber1115 = org.mockito.Mockito.doNothing();
+        android.os.Parcel parcel23 = stubber1115.when(parcel22);
+        parcel23.writeInt(1);
+        org.mockito.stubbing.Stubber stubber1116 = org.mockito.Mockito.doNothing();
+        android.os.Parcel parcel24 = stubber1116.when(parcel22);
+        parcel24.writeString("Raspberry juice");
+        org.mockito.stubbing.Stubber stubber1117 = org.mockito.Mockito.doNothing();
+        android.os.Parcel parcel25 = stubber1117.when(parcel22);
+        parcel25.writeString("168177850");
+        org.mockito.stubbing.Stubber stubber1118 = org.mockito.Mockito.doNothing();
+        android.os.Parcel parcel26 = stubber1118.when(parcel22);
+        parcel26.writeString("Vegetables");
+        org.mockito.stubbing.Stubber stubber1119 = org.mockito.Mockito.doNothing();
+        android.os.Parcel parcel27 = stubber1119.when(parcel22);
+        parcel27.writeString("null");
+        org.mockito.stubbing.Stubber stubber1120 = org.mockito.Mockito.doNothing();
+        android.os.Parcel parcel28 = stubber1120.when(parcel22);
+        parcel28.writeString("");
+        org.mockito.stubbing.Stubber stubber1121 = org.mockito.Mockito.doNothing();
+        android.os.Parcel parcel29 = stubber1121.when(parcel22);
+        parcel29.writeString("-");
+        org.mockito.stubbing.Stubber stubber1122 = org.mockito.Mockito.doNothing();
+        android.os.Parcel parcel30 = stubber1122.when(parcel22);
+        parcel30.writeString("-");
+        org.mockito.stubbing.Stubber stubber1123 = org.mockito.Mockito.doNothing();
+        android.os.Parcel parcel31 = stubber1123.when(parcel22);
+        parcel31.writeString("Raspberries");
+        org.mockito.stubbing.Stubber stubber1124 = org.mockito.Mockito.doNothing();
+        android.os.Parcel parcel32 = stubber1124.when(parcel22);
+        parcel32.writeString("");
+        org.mockito.stubbing.Stubber stubber1125 = org.mockito.Mockito.doNothing();
+        android.os.Parcel parcel33 = stubber1125.when(parcel22);
+        parcel33.writeString("Much");
+        org.mockito.stubbing.Stubber stubber1126 = org.mockito.Mockito.doNothing();
+        android.os.Parcel parcel34 = stubber1126.when(parcel22);
+        parcel34.writeInt(500);
+        org.mockito.stubbing.Stubber stubber1127 = org.mockito.Mockito.doNothing();
+        android.os.Parcel parcel35 = stubber1127.when(parcel22);
+        parcel35.writeInt(1000);
+        org.mockito.stubbing.Stubber stubber1128 = org.mockito.Mockito.doNothing();
+        android.os.Parcel parcel36 = stubber1128.when(parcel22);
+        parcel36.writeByte(0);
+        org.mockito.stubbing.Stubber stubber1129 = org.mockito.Mockito.doNothing();
+        android.os.Parcel parcel37 = stubber1129.when(parcel22);
+        parcel37.writeByte(0);
+        org.mockito.stubbing.Stubber stubber1130 = org.mockito.Mockito.doNothing();
+        android.os.Parcel parcel38 = stubber1130.when(parcel22);
+        parcel38.writeByte(0);
+        org.mockito.stubbing.Stubber stubber1131 = org.mockito.Mockito.doNothing();
+        android.os.Parcel parcel39 = stubber1131.when(parcel22);
+        parcel39.writeByte(0);
+        org.mockito.stubbing.Stubber stubber1132 = org.mockito.Mockito.doNothing();
+        android.os.Parcel parcel40 = stubber1132.when(parcel22);
+        parcel40.writeString("Sweet");
+        org.mockito.stubbing.Stubber stubber1133 = org.mockito.Mockito.doNothing();
+        android.os.Parcel parcel41 = stubber1133.when(parcel22);
+        parcel41.writeString("");
+        org.mockito.stubbing.Stubber stubber1134 = org.mockito.Mockito.doNothing();
+        android.os.Parcel parcel42 = stubber1134.when(parcel22);
+        parcel42.writeString("");
+        org.mockito.stubbing.Stubber stubber1135 = org.mockito.Mockito.doNothing();
+        android.os.Parcel parcel43 = stubber1135.when(parcel22);
+        parcel43.writeString("");
+        product707 = new com.hermanowicz.pantry.db.product.Product();
+        product707.setId(1);
+        product707.setName("Raspberry juice");
+        product707.setHashCode("168177850");
+        product707.setTypeOfProduct("Vegetables");
+        product707.setProductFeatures("null");
+        product707.setStorageLocation("");
+        product707.setExpirationDate("-");
+        product707.setProductionDate("-");
+        product707.setComposition("Raspberries");
+        product707.setHealingProperties("");
+        product707.setDosage("Much");
+        product707.setVolume(500);
+        product707.setWeight(1000);
+        product707.setHasSugar(false);
+        product707.setHasSalt(false);
+        product707.setIsVege(false);
+        product707.setIsBio(false);
+        product707.setTaste("Sweet");
+        product707.setPhotoName("");
+        product707.setPhotoDescription("");
+        product707.setBarcode("");
+        product707.getName();
+        product707.getTypeOfProduct();
+        product707.getProductFeatures();
+        product707.getExpirationDate();
+        product707.getProductionDate();
+        product707.getHealingProperties();
+        product707.getComposition();
+        product707.getDosage();
+        product707.getBarcode();
+        product707.getWeight();
+        product707.getVolume();
+        product707.getHasSugar();
+        product707.getHasSalt();
+        product707.getIsVege();
+        product707.getIsBio();
+        product707.getTaste();
+        product707.getStorageLocation();
+        product707.writeToParcel(parcel43, 0);
+    }
+}

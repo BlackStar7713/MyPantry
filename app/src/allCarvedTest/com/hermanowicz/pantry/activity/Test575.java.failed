@@ -1,0 +1,28 @@
+package com.hermanowicz.pantry.activity;
+
+import org.junit.Before;
+import androidx.test.core.app.ApplicationProvider;
+import org.robolectric.RobolectricTestRunner;
+import org.junit.runner.RunWith;
+import org.junit.Test;
+
+@RunWith(RobolectricTestRunner.class)
+public class Test575 {
+
+    @Before()
+    public void setup() {
+        org.robolectric.shadows.ShadowSQLiteConnection.reset();
+    }
+
+    /**
+     * Generated from /scratch/berreiter/action-based-test-carving/apps-src/MyPantry/traces/activities.MainActivityTest#shouldGoToAppSettingsActivity/Trace-1659559014062.txt
+     * Method invocation under test: <com.hermanowicz.pantry.activity.AppSettingsActivity: void finish()>_489_978
+     */
+    @Test(timeout = 4000)
+    public void test_com_hermanowicz_pantry_activity_AppSettingsActivity_finish_001() throws Exception {
+        org.robolectric.android.controller.ActivityController activitycontroller39 = org.robolectric.Robolectric.buildActivity(com.hermanowicz.pantry.activity.AppSettingsActivity.class);
+        com.hermanowicz.pantry.activity.AppSettingsActivity appsettingsactivity3 = (com.hermanowicz.pantry.activity.AppSettingsActivity) activitycontroller39.get();
+        activitycontroller39.create();
+        appsettingsactivity3.finish();
+    }
+}

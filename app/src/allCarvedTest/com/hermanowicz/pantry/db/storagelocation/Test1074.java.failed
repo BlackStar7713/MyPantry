@@ -1,0 +1,34 @@
+package com.hermanowicz.pantry.db.storagelocation;
+
+import org.junit.Before;
+import androidx.test.core.app.ApplicationProvider;
+import org.robolectric.RobolectricTestRunner;
+import org.junit.runner.RunWith;
+import org.junit.Test;
+
+@RunWith(RobolectricTestRunner.class)
+public class Test1074 {
+
+    @Before()
+    public void setup() {
+        org.robolectric.shadows.ShadowSQLiteConnection.reset();
+    }
+
+    /**
+     * Generated from /scratch/berreiter/action-based-test-carving/apps-src/MyPantry/traces/activities.NewProductActivityTest#onPressedBackNavigateToMainActivity/Trace-1659559170023.txt
+     * Method invocation under test: <com.hermanowicz.pantry.db.storagelocation.StorageLocationDao_Impl: java.lang.String[] getAllStorageLocationsArray()>_389_773
+     */
+    @Test(timeout = 4000)
+    public void test_com_hermanowicz_pantry_db_storagelocation_StorageLocationDao_Impl_getAllStorageLocationsArray_001() throws Exception {
+        com.hermanowicz.pantry.db.storagelocation.StorageLocationDb_Impl storagelocationdb_impl6 = null;
+        androidx.room.DatabaseConfiguration databaseconfiguration31 = org.mockito.Mockito.mock(androidx.room.DatabaseConfiguration.class);
+        java.util.HashMap hashmap32 = org.mockito.Mockito.mock(java.util.HashMap.class);
+        storagelocationdb_impl6 = new com.hermanowicz.pantry.db.storagelocation.StorageLocationDb_Impl();
+        storagelocationdb_impl6.createOpenHelper(databaseconfiguration31);
+        storagelocationdb_impl6.getRequiredAutoMigrationSpecs();
+        storagelocationdb_impl6.getAutoMigrations(hashmap32);
+        storagelocationdb_impl6.getRequiredTypeConverters();
+        com.hermanowicz.pantry.db.storagelocation.StorageLocationDao_Impl storagelocationdao_impl3 = (com.hermanowicz.pantry.db.storagelocation.StorageLocationDao_Impl) storagelocationdb_impl6.storageLocationDao();
+        storagelocationdao_impl3.getAllStorageLocationsArray();
+    }
+}

@@ -1,0 +1,84 @@
+package com.hermanowicz.pantry.activity;
+
+import org.junit.Before;
+import androidx.test.core.app.ApplicationProvider;
+import org.robolectric.RobolectricTestRunner;
+import org.junit.runner.RunWith;
+import org.junit.Test;
+
+@RunWith(RobolectricTestRunner.class)
+public class Test1084 {
+
+    @Before()
+    public void setup() {
+        org.robolectric.shadows.ShadowSQLiteConnection.reset();
+    }
+
+    /**
+     * Generated from /scratch/berreiter/action-based-test-carving/apps-src/MyPantry/traces/activities.NewProductActivityTest#onPressedBackNavigateToMainActivity/Trace-1659559170023.txt
+     * Method invocation under test: <com.hermanowicz.pantry.activity.MainActivity: void onResume()>_602_1204
+     */
+    @Test(timeout = 4000)
+    public void test_com_hermanowicz_pantry_activity_MainActivity_onResume_001() throws Exception {
+        androidx.constraintlayout.widget.ConstraintLayout constraintlayout0 = null;
+        android.view.ViewGroup viewgroup0 = null;
+        com.android.internal.policy.PhoneLayoutInflater phonelayoutinflater2 = org.mockito.Mockito.mock(com.android.internal.policy.PhoneLayoutInflater.class);
+        org.mockito.stubbing.Stubber stubber47 = org.mockito.Mockito.doReturn(constraintlayout0);
+        com.android.internal.policy.PhoneLayoutInflater phonelayoutinflater3 = stubber47.when(phonelayoutinflater2);
+        phonelayoutinflater3.inflate(2131558435, viewgroup0, false);
+        androidx.constraintlayout.widget.ConstraintLayout constraintlayout3 = (androidx.constraintlayout.widget.ConstraintLayout) phonelayoutinflater3.inflate(2131558435, viewgroup0, false);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout3, 2131361926);
+        androidx.constraintlayout.widget.ConstraintLayout constraintlayout4 = (androidx.constraintlayout.widget.ConstraintLayout) androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout3, 2131362297);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout4, 2131361968);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout4, 2131361969);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout4, 2131361970);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout4, 2131361971);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout4, 2131362048);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout4, 2131362050);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout4, 2131362051);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout4, 2131362054);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout4, 2131362055);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout4, 2131362057);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout4, 2131362060);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout4, 2131362061);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout4, 2131362064);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout4, 2131362154);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout4, 2131362156);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout4, 2131362157);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout4, 2131362158);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout4, 2131362159);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout4, 2131362161);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout4, 2131362162);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout4, 2131362163);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout4, 2131362298);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout4, 2131362302);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout4, 2131362303);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout4, 2131362304);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout4, 2131362305);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout4, 2131362306);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout4, 2131362307);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout4, 2131362308);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout4, 2131362375);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout4, 2131362376);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout4, 2131362377);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout4, 2131362433);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout4, 2131362435);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout4, 2131362437);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout4, 2131362441);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout4, 2131362447);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout4, 2131362448);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout4, 2131362470);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout4, 2131362474);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout4, 2131362482);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout4, 2131362483);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout4, 2131362487);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout4, 2131362488);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout4, 2131362489);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout3, 2131362336);
+        androidx.viewbinding.ViewBindings.findChildViewById(constraintlayout3, 2131362502);
+        org.robolectric.android.controller.ActivityController activitycontroller47 = org.robolectric.Robolectric.buildActivity(com.hermanowicz.pantry.activity.MainActivity.class);
+        activitycontroller47.get();
+        org.robolectric.android.controller.ActivityController activitycontroller48 = activitycontroller47.create();
+        activitycontroller48.resume();
+    }
+}

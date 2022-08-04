@@ -1,0 +1,33 @@
+package com.hermanowicz.pantry.activity;
+
+import org.junit.Before;
+import androidx.test.core.app.ApplicationProvider;
+import org.robolectric.RobolectricTestRunner;
+import org.junit.runner.RunWith;
+import org.junit.Test;
+
+@RunWith(RobolectricTestRunner.class)
+public class Test834 {
+
+    @Before()
+    public void setup() {
+        org.robolectric.shadows.ShadowSQLiteConnection.reset();
+    }
+
+    /**
+     * Generated from /scratch/berreiter/action-based-test-carving/apps-src/MyPantry/traces/activities.NewProductActivityTest#notSpecifyingTheProductNameShouldDisplayAnError/Trace-1659559175914.txt
+     * Method invocation under test: <com.hermanowicz.pantry.activity.NewProductActivity: void showErrorNameNotSet()>_545_1085
+     */
+    @Test(timeout = 4000)
+    public void test_com_hermanowicz_pantry_activity_NewProductActivity_showErrorNameNotSet_001() throws Exception {
+        android.content.Intent intent11 = null;
+        intent11 = new android.content.Intent();
+        org.robolectric.android.controller.ActivityController activitycontroller41 = org.robolectric.Robolectric.buildActivity(com.hermanowicz.pantry.activity.NewProductActivity.class, intent11);
+        com.hermanowicz.pantry.activity.NewProductActivity newproductactivity20 = (com.hermanowicz.pantry.activity.NewProductActivity) activitycontroller41.get();
+        org.robolectric.android.controller.ActivityController activitycontroller42 = activitycontroller41.create();
+        org.robolectric.android.controller.ActivityController activitycontroller43 = activitycontroller42.resume();
+        activitycontroller43.visible();
+        newproductactivity20.findViewById(2131362306);
+        newproductactivity20.showErrorNameNotSet();
+    }
+}

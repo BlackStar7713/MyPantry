@@ -1,0 +1,72 @@
+package com.hermanowicz.pantry.model;
+
+import org.junit.Before;
+import androidx.test.core.app.ApplicationProvider;
+import org.robolectric.RobolectricTestRunner;
+import org.junit.runner.RunWith;
+import org.junit.Test;
+
+@RunWith(RobolectricTestRunner.class)
+public class Test570 {
+
+    @Before()
+    public void setup() {
+        org.robolectric.shadows.ShadowSQLiteConnection.reset();
+    }
+
+    /**
+     * Generated from /scratch/berreiter/action-based-test-carving/apps-src/MyPantry/traces/activities.MainActivityTest#shouldGoToAppSettingsActivity/Trace-1659559014062.txt
+     * Method invocation under test: <com.hermanowicz.pantry.model.AppSettingsModel: void clearEmailAddress()>_431_859
+     */
+    @Test(timeout = 4000)
+    public void test_com_hermanowicz_pantry_model_AppSettingsModel_clearEmailAddress_001() throws Exception {
+        com.hermanowicz.pantry.model.AppSettingsModel appsettingsmodel4 = null;
+        com.hermanowicz.pantry.model.DatabaseMode.Mode mode2 = com.hermanowicz.pantry.model.DatabaseMode.Mode.LOCAL;
+        java.lang.Object object40 = null;
+        java.lang.Object object41 = org.mockito.Mockito.mock(android.app.SharedPreferencesImpl$EditorImpl.class);
+        org.mockito.stubbing.Stubber stubber111 = org.mockito.Mockito.doReturn(object40);
+        java.lang.Object object42 = stubber111.when(object41);
+        object42.putString("EMAIL_ADDRESS", "");
+        org.mockito.stubbing.Stubber stubber112 = org.mockito.Mockito.doNothing();
+        java.lang.Object object43 = stubber112.when(object41);
+        object43.apply();
+        android.content.SharedPreferences sharedpreferences54 = org.mockito.Mockito.mock(android.content.SharedPreferences.class);
+        org.mockito.stubbing.Stubber stubber113 = org.mockito.Mockito.doReturn("0");
+        android.content.SharedPreferences sharedpreferences55 = stubber113.when(sharedpreferences54);
+        sharedpreferences55.getString("SELECTED_APPLICATION_THEME", "0");
+        org.mockito.stubbing.Stubber stubber114 = org.mockito.Mockito.doReturn("local");
+        android.content.SharedPreferences sharedpreferences56 = stubber114.when(sharedpreferences54);
+        sharedpreferences56.getString("DATABASE_MODE", "local");
+        org.mockito.stubbing.Stubber stubber115 = org.mockito.Mockito.doReturn(false);
+        android.content.SharedPreferences sharedpreferences57 = stubber115.when(sharedpreferences54);
+        sharedpreferences57.getBoolean("IS_NOTIFICATIONS_TO_RESTORE", false);
+        org.mockito.stubbing.Stubber stubber116 = org.mockito.Mockito.doReturn("0");
+        android.content.SharedPreferences sharedpreferences58 = stubber116.when(sharedpreferences54);
+        sharedpreferences58.getString("SELECTED_APPLICATION_THEME", "0");
+        org.mockito.stubbing.Stubber stubber117 = org.mockito.Mockito.doReturn("0");
+        android.content.SharedPreferences sharedpreferences59 = stubber117.when(sharedpreferences54);
+        sharedpreferences59.getString("SELECTED_APPLICATION_THEME", "0");
+        org.mockito.stubbing.Stubber stubber118 = org.mockito.Mockito.doReturn("0");
+        android.content.SharedPreferences sharedpreferences60 = stubber118.when(sharedpreferences54);
+        sharedpreferences60.getString("SCAN_CAMERA", "0");
+        org.mockito.stubbing.Stubber stubber119 = org.mockito.Mockito.doReturn("local");
+        android.content.SharedPreferences sharedpreferences61 = stubber119.when(sharedpreferences54);
+        sharedpreferences61.getString("DATABASE_MODE", "local");
+        org.mockito.stubbing.Stubber stubber120 = org.mockito.Mockito.doReturn("");
+        android.content.SharedPreferences sharedpreferences62 = stubber120.when(sharedpreferences54);
+        sharedpreferences62.getString("EMAIL_ADDRESS", "");
+        org.mockito.stubbing.Stubber stubber121 = org.mockito.Mockito.doReturn(object43);
+        android.content.SharedPreferences sharedpreferences63 = stubber121.when(sharedpreferences54);
+        sharedpreferences63.edit();
+        sharedpreferences63.getString("SELECTED_APPLICATION_THEME", "0");
+        sharedpreferences63.getString("DATABASE_MODE", "local");
+        sharedpreferences63.getBoolean("IS_NOTIFICATIONS_TO_RESTORE", false);
+        sharedpreferences63.getString("SELECTED_APPLICATION_THEME", "0");
+        appsettingsmodel4 = new com.hermanowicz.pantry.model.AppSettingsModel(sharedpreferences63);
+        appsettingsmodel4.getSelectedAppTheme();
+        appsettingsmodel4.getSelectedScanCamera();
+        appsettingsmodel4.getDatabaseMode();
+        appsettingsmodel4.isValidEmail();
+        appsettingsmodel4.clearEmailAddress();
+    }
+}
