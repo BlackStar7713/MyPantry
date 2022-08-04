@@ -86,7 +86,8 @@ task jacocoUnitTestCoverage(type: JacocoReport, dependsOn: ['testDebugUnitTest']
 
     getExecutionData().setFrom(fileTree(
             dir: "${buildDir}",
-            include: ['jacoco/testDebugUnitTest.exec']
+            include: ['outputs/unit_test_code_coverage/debugUnitTest/testDebugUnitTest.exec']
+            //include: ['jacoco/testDebugUnitTest.exec']
     ))
 }
 
