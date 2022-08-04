@@ -109,6 +109,6 @@ task jacocoGUITestCoverage(type: JacocoReport, dependsOn: ['connectedAndroidTest
 
     getExecutionData().setFrom(fileTree(
             dir: "${buildDir}",
-            include: ['outputs/code_coverage/debugAndroidTest/connected/*coverage.ec']
+            include: ['outputs/code_coverage/debugAndroidTest/connected/*/coverage.ec']
     ))
 }
